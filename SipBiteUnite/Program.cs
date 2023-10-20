@@ -74,10 +74,10 @@ namespace SipBiteUnite
         public static void InsertRandomDataIntoRatings(int numberOfRecords)
         {
             var faker = new Faker<Rating>()
-                .RuleFor(r => r.IdBeer, f => f.Random.Number(1, 20)) 
+                .RuleFor(r => r.IdBeer, f => f.Random.Number(1, 20))
                 .RuleFor(r => r.IdFood, f => f.Random.Number(1, 20))
-                .RuleFor(r => r.Rating1, f => f.Random.Number(100, 500) / 100f) 
-                .RuleFor(r => r.IdUser, f => f.Random.Number(1, 20)); 
+                .RuleFor(r => r.Rating1, f => f.Random.Number(100, 500) / 100f)
+                .RuleFor(r => r.IdUser, f => f.Random.Number(1, 20));
 
             using (NpgsqlConnection connection = new NpgsqlConnection("Host=127.0.0.1;Port=5432;Database=SipByteDatabase;Username=postgres;Password=admin"))
             {
@@ -139,8 +139,8 @@ namespace SipBiteUnite
         }
         public static void InsertRandomDataIntoShopssum(int numberOfRecords)
         {
-            var shopIds = GetShopIdsFromDatabase(); 
-            var BeerId = GetBeerIdsFromDatabase(); 
+            var shopIds = GetShopIdsFromDatabase();
+            var BeerId = GetBeerIdsFromDatabase();
 
             var faker = new Faker<Shopssum>()
                 .RuleFor(s => s.ShopId, f => f.PickRandom(shopIds))
@@ -247,6 +247,35 @@ namespace SipBiteUnite
             }
         }
         #endregion
+
+        #region DeleteData
+        public static void DeleteBeerAndRelatedRecords(int beerId)
+        {
+            using (NpgsqlConnection connection = new NpgsqlConnection("Host=127.0.0.1;Port=5432;Database=SipByteDatabase;Username=postgres;Password=admin"))
+            {
+                connection.Open();
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = connection;
+
+                    cmd.CommandText = "DELETE FROM rating WHERE id_beer = @beerId";
+                    cmd.Parameters.AddWithValue("@beerId", beerId);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE FROM shopssum WHERE beer_id = @beerId";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE FROM beer WHERE id = @beerId";
+                    cmd.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+        }
+
+        #endregion
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
@@ -257,7 +286,8 @@ namespace SipBiteUnite
             //InsertRandomDataIntoRatings(40);
             //InsertRandomDataIntoShops(30);
             //InsertRandomDataIntoShopssum(30);
-
+            //int beerIdToDelete = 10;
+            //DeleteBeerAndRelatedRecords(beerIdToDelete);
             using (var context = new SipByteDatabaseContext())
             {
                 var beers = context.Beers.ToList();
