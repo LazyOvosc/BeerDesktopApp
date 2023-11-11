@@ -40,5 +40,5 @@ CREATE TABLE ShopsSum (
     beer_id INT REFERENCES Beer(id),
     price NUMERIC,
     url VARCHAR(255),
-    PRIMARY KEY (shop_id, beer_id)
+    FOREIGN KEY (shop_id, beer_id)
 );
