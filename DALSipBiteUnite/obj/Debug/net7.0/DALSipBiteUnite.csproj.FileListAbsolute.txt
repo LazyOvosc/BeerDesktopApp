@@ -1,0 +1,14 @@
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.deps.json
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.pdb
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.AssemblyInfoInputs.cache
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.AssemblyInfo.cs
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\refint\DALSipBiteUnite.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.pdb
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\ref\DALSipBiteUnite.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.runtimeconfig.json
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.genruntimeconfig.cache
