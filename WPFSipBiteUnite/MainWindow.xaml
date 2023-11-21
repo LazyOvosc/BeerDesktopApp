@@ -3,10 +3,51 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFSipBiteUnite"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+            <Button Content="Купити" Style="{StaticResource Border}" Width="200">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>    
+            <Button Content="Деталі" Style="{StaticResource SecondaryButton}"  Width="200">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>    
+            <StackPanel>
+                <!-- Nav item з іконкою -->
+                <ToggleButton Style="{StaticResource NavItemStyle}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Image Source="C:/Users/User/RiderProjects/SipBiteUnite/WPFSipBiteUnite/assets/solar_emoji-funny-circle-linear.png" Width="16" Height="16" Margin="0,0,8,0"/>
+                        <TextBlock Text="Профіль" Margin="0,0,0,0"/>
+                    </StackPanel>
+                    <ToggleButton.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="6"></Setter>
+                        </Style>
+                    </ToggleButton.Resources>
+                </ToggleButton>
 
+                <!-- Nav item без іконки -->
+                <ToggleButton Style="{StaticResource NavItemStyle}">
+                    <TextBlock Text="Пиво"/>
+                    <ToggleButton.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="6"></Setter>
+                        </Style>
+                    </ToggleButton.Resources>
+                </ToggleButton>
+                <TextBox Style="{StaticResource DefaultTextBoxStyle}" ></TextBox>
+                <TextBox Style="{StaticResource FocusedTextBoxStyle}" ></TextBox>
+                <TextBox Style="{StaticResource FilledTextBoxStyle}" ></TextBox>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

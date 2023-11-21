@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WPFSipBiteUnite"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="colors.xaml" />
+                <ResourceDictionary Source="CustomButtons.xaml" />
+                <ResourceDictionary Source="CustomInput.xaml" />
+                <ResourceDictionary Source="CustomNavigation.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
