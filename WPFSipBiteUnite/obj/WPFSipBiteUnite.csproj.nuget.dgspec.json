@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj": {}
+    "D:\\ForStudy\\SipBiteUniteWPF1\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj": {
+    "D:\\ForStudy\\SipBiteUniteWPF1\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj",
+        "projectUniqueName": "D:\\ForStudy\\SipBiteUniteWPF1\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj",
         "projectName": "WPFSipBiteUnite",
-        "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSipBiteUnite\\obj\\",
+        "projectPath": "D:\\ForStudy\\SipBiteUniteWPF1\\WPFSipBiteUnite\\WPFSipBiteUnite.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "D:\\ForStudy\\SipBiteUniteWPF1\\WPFSipBiteUnite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -73,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
