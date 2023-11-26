@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ForStudy\SipBiteUniteWPF1\WPFSipBiteUnite\obj\Debug\net7.0-windows\
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\
 WPFSipBiteUnite
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\ForStudy\SipBiteUniteWPF1\WPFSipBiteUnite\App.xaml
-10-1883451633
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\App.xaml
+61167665380
 
-101147604887
-212-1219275250
-BeerWindow.xaml;colors.xaml;CustomButtons.xaml;CustomInput.xaml;CustomNavigation.xaml;DiscoverWindow.xaml;FoodWindow.xaml;LoadWindow.xaml;Profile.xaml;ProfileLogined.xaml;
+6-1987203550
+198-651932399
+AllBeersPage.xaml;AllBeersWindow.xaml;Colors.xaml;CustomButtons.xaml;CustomInput.xaml;CustomNavigation.xaml;
 
-False
+True
 

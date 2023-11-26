@@ -1,16 +1,15 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Кольори -->
+    <!-- Colors -->
     <Color x:Key="Neutral300">#F0F1F2</Color>
     <Color x:Key="Neutral400">#E1E2E5</Color>
     <Color x:Key="NeutralBlack">#000000</Color>
-    
-    <!-- Кисті -->
+
+    <!-- Brushes -->
     <SolidColorBrush x:Key="Neutral300Brush" Color="{StaticResource Neutral300}" />
     <SolidColorBrush x:Key="Neutral400Brush" Color="{StaticResource Neutral400}" />
     <SolidColorBrush x:Key="NeutralBlackBrush" Color="{StaticResource NeutralBlack}" />
-
-    <!-- Стилі для nav item -->
+    <!-- Styles for nav item -->
     <Style x:Key="NavItemStyle" TargetType="ToggleButton">
         <Setter Property="Background" Value="{StaticResource Neutral300Brush}"/>
         <Setter Property="Foreground" Value="{StaticResource NeutralBlackBrush}"/>
@@ -32,7 +31,7 @@
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="Background" Value="{StaticResource Neutral400Brush}"/>
             </Trigger>
-            
+
         </Style.Triggers>
     </Style>
 </ResourceDictionary>

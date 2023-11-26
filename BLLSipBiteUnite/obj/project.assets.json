@@ -693,25 +693,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sergio\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ForStudy\\SipBiteUniteWPF1\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
+      "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
       "projectName": "BLLSipBiteUnite",
-      "projectPath": "D:\\ForStudy\\SipBiteUniteWPF1\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "D:\\ForStudy\\SipBiteUniteWPF1\\BLLSipBiteUnite\\obj\\",
+      "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
+      "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\BLLSipBiteUnite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -727,8 +725,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\ForStudy\\SipBiteUniteWPF1\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
-              "projectPath": "D:\\ForStudy\\SipBiteUniteWPF1\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
+            "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
+              "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
             }
           }
         }
@@ -768,8 +766,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\BLLSipBiteUnite\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

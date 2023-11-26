@@ -1,6 +1,6 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!-- Кольори -->
+    <!-- Colors -->
     <Color x:Key="NeutralBlack">#000000</Color>
     <Color x:Key="Neutral700">#4B4B4B</Color>
     <Color x:Key="Neutral400">#E1E2E5</Color>
@@ -8,8 +8,7 @@
     <Color x:Key="NeutralWhite">#FFFFFF</Color>
     <Color x:Key="Primary">#656BFF</Color>
     <Color x:Key="FunctionalRed">#D4214B</Color>
-
-    <!-- Кисті -->
+    <!-- Brushes -->
     <SolidColorBrush x:Key="NeutralBlackBrush" Color="{StaticResource NeutralBlack}" />
     <SolidColorBrush x:Key="Neutral700Brush" Color="{StaticResource Neutral700}" />
     <SolidColorBrush x:Key="Neutral400Brush" Color="{StaticResource Neutral400}" />
