@@ -6,8 +6,8 @@
       xmlns:local="clr-namespace:WPFSipBiteUnite"
       mc:Ignorable="d"
       Title="AllBeersWindow" Height="640" Width="1004">
-    <Grid>
-        <StackPanel Background="{StaticResource Neutral300Brush}" Width="320" Height="640" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid Background="White" ShowGridLines="True" Grid.IsSharedSizeScope="True">
+        <StackPanel Background="{StaticResource Neutral300Brush}" Width="320" Height="640" Margin="0,0,0,0" HorizontalAlignment="Left">
             <!-- Nav item without icon -->
             <ToggleButton Style="{StaticResource NavItemStyle}" Margin="0,56,0,0" Checked="BeerButton_Checked" Name="BeerButton" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Text="Пиво"/>
@@ -43,9 +43,15 @@
         <!--         </Style> -->
         <!--     </ContentControl.Resources> -->
         <!-- </ContentControl> -->
-        
-        
-        <local:CustomCardSmall/>
-        
+        <Grid Grid.Column="11" ShowGridLines="True">
+            <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+            <local:CustomCardSmall Margin="378,10,346,478"/>
+            <local:CustomCardSmall Margin="686,10,38,478" Loaded="CustomCardSmall_Loaded"/>
+            <local:CustomCardSmall Margin="686,192,38,296" Loaded="CustomCardSmall_Loaded"/>
+        </Grid>
+
+
+
+
     </Grid>
 </Page>

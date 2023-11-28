@@ -2,18 +2,23 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Colors -->
     <Color x:Key="NeutralBlack">#000000</Color>
+    <Color x:Key="Neutral900">#1a1a1d</Color>
     <Color x:Key="Neutral700">#4B4B4B</Color>
     <Color x:Key="Neutral400">#E1E2E5</Color>
     <Color x:Key="Neutral300">#F0F1F2</Color>
     <Color x:Key="NeutralWhite">#FFFFFF</Color>
     <Color x:Key="Primary">#656BFF</Color>
+    <Color x:Key="PrimaryHover">#87a3ff</Color>
     <Color x:Key="FunctionalRed">#D4214B</Color>
+    
     <!-- Brushes -->
     <SolidColorBrush x:Key="NeutralBlackBrush" Color="{StaticResource NeutralBlack}" />
+    <SolidColorBrush x:Key="Neutral900Brush" Color="{StaticResource Neutral900}" />
     <SolidColorBrush x:Key="Neutral700Brush" Color="{StaticResource Neutral700}" />
     <SolidColorBrush x:Key="Neutral400Brush" Color="{StaticResource Neutral400}" />
     <SolidColorBrush x:Key="Neutral300Brush" Color="{StaticResource Neutral300}" />
     <SolidColorBrush x:Key="NeutralWhiteBrush" Color="{StaticResource NeutralWhite}" />
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+    <SolidColorBrush x:Key="PrimaryHoverBrush" Color="{StaticResource PrimaryHover}" />
     <SolidColorBrush x:Key="FunctionalRedBrush" Color="{StaticResource FunctionalRed}" />
 </ResourceDictionary>

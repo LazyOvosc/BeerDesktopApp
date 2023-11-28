@@ -45,5 +45,10 @@ namespace WPFSipBiteUnite
             BeerButton.IsChecked= false;
             ProfileButton.IsChecked = false;
         }
+
+        private void CustomCardSmall_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
