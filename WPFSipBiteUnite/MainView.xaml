@@ -1,18 +1,39 @@
-﻿<Window x:Class="WPFSipBiteUnite.ProfileView"
+﻿<Window x:Class="WPFSipBiteUnite.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WPFSipBiteUnite"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:viewModel="clr-namespace:WPFSipBiteUnite.ViewModel"
         mc:Ignorable="d"
-        Title="ProfileView" Height="640" Width="1004"
+        Title="MainView" Height="640" Width="1004"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
+    
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:BeersExploreViewModel}">
+            <local:BeersView />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewModel:DishesExploreViewModel}">
+            <local:DishesExploreView />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewModel:UnsignedProfileViewModel}">
+            <local:UnsignedProfileView />
+        </DataTemplate>
+        
+    </Window.Resources>
+    
     <Border CornerRadius="14"
             BorderThickness="2">
 
@@ -43,8 +64,8 @@
                     <!--Menu Buttons-->
                     <RadioButton Style="{StaticResource NavItemStyle}"
                                  Tag="{StaticResource PrimaryHoverBrush}"
-                                 IsChecked="False"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 IsChecked="True"
+                                 Command="{Binding ShowBeersExploreViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="GlassCheers" Style="{StaticResource NavIconStyle}" />
                             <TextBlock Text="Пиво" Style="{StaticResource NavItemText}" />
@@ -58,8 +79,7 @@
 
                     <RadioButton Style="{StaticResource NavItemStyle}"
                                  Tag="{StaticResource PrimaryHoverBrush}"
-                                 IsChecked="False"
-                                 Command="{Binding ShowHomeViewCommand}"
+                                 Command="{Binding ShowDishesExploreViewCommand}"
                                  Margin="0, 16, 0,0">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="BowlFood" Style="{StaticResource NavIconStyle}" />
@@ -74,8 +94,7 @@
 
                     <RadioButton Style="{StaticResource NavItemStyle}"
                                  Tag="{StaticResource PrimaryHoverBrush}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}"
+                                 Command="{Binding ShowUnsignedProfileViewCommand}"
                                  Margin="0, 420, 0,0">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="User" Style="{StaticResource NavIconStyle}" />
@@ -189,7 +208,7 @@
                             Grid.Column="1"
                             VerticalAlignment="Top">
                             <TextBlock
-                                Text="Профіль"
+                                Text="{Binding Caption}"
                                 FontFamily="Montserrat"
                                 FontSize="28"
                                 FontWeight="Medium"
@@ -202,13 +221,16 @@
                     
                     <!-- Child -->
                     <ContentControl
-                        Content=""
+                        Content="{Binding CurrentChildView}"
                         Grid.Row="2"
-                        Margin="56, 0, 56, 4"></ContentControl>
+                        Margin="56, 0, 56, 4"
+                        Width="572"
+                        HorizontalAlignment="Left"></ContentControl>
                     
                 </Grid>
 
             </Border>
+            
         </Grid>
     </Border>
 </Window>
