@@ -9,30 +9,30 @@
     <Grid Background="White" ShowGridLines="True" Grid.IsSharedSizeScope="True">
         <StackPanel Background="{StaticResource Neutral300Brush}" Width="320" Height="640" Margin="0,0,0,0" HorizontalAlignment="Left">
             <!-- Nav item without icon -->
-            <ToggleButton Style="{StaticResource NavItemStyle}" Margin="0,56,0,0" Checked="BeerButton_Checked" Name="BeerButton" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <RadioButton Style="{StaticResource NavItemStyle}" Margin="0,56,0,0" Checked="BeerButton_Checked" Name="BeerButton" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Text="Пиво"/>
                 <ToggleButton.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6"/>
                     </Style>
                 </ToggleButton.Resources>
-            </ToggleButton>
-            <ToggleButton Style="{StaticResource NavItemStyle}" Margin="0,12,0,0" Name="FoodButton" Checked="FoodButton_Checked" HorizontalAlignment="Center" VerticalAlignment="Top">
+            </RadioButton>
+            <RadioButton Style="{StaticResource NavItemStyle}" Margin="0,12,0,0" Name="FoodButton" Checked="FoodButton_Checked" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Text="Страви"/>
                 <ToggleButton.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6"/>
                     </Style>
                 </ToggleButton.Resources>
-            </ToggleButton>
-            <ToggleButton Style="{StaticResource NavItemStyle}" Margin="0,420,0,0" Checked="ProfileButton_Checked" Name="ProfileButton" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            </RadioButton>
+            <RadioButton Style="{StaticResource NavItemStyle}" Margin="0,420,0,0" Checked="ProfileButton_Checked" Name="ProfileButton" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                 <TextBlock Text="Профіль"/>
                 <ToggleButton.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6"/>
                     </Style>
                 </ToggleButton.Resources>
-            </ToggleButton>
+            </RadioButton>
         </StackPanel>
         
         <!-- <ContentControl Style="{StaticResource SmallBeerCardStyle}" DataContext="{Binding SmallBeerViewModel}"> -->

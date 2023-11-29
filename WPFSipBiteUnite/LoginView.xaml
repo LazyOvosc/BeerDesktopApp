@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSipBiteUnite"
         mc:Ignorable="d"
-        Title="LoginView" Height="640" Width="1004"
+        Title="LoginView" Height="540" Width="804"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
@@ -43,7 +43,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="25"/>
-                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="8"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Вхід"
                             Foreground="{StaticResource Neutral700Brush}"
@@ -53,36 +53,7 @@
                             Grid.Column="0"
                             VerticalAlignment="Center"
                             Margin="10,0,0,0"/>
-                <Button x:Name="btnMinimize"                           
-                        BorderThickness="0"
-                        Content="-"
-                        Foreground="{StaticResource NeutralWhiteBrush}"
-                        FontSize="16"
-                        FontFamily="Montserrat"
-                        Cursor="Hand"
-                        Grid.Column="1"
-                        Click="btnMinimize_Click">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="{StaticResource Neutral900Brush}"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="{StaticResource Neutral700Brush}"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="18" Height="18"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                
                 <Button x:Name="btnClose"                          
                         BorderThickness="0"
                         Content="X"
@@ -117,7 +88,7 @@
             <StackPanel Width="380"
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="0,80,0,0">
+                        Margin="0,56,0,0">
                 <TextBlock Text="Вхід"
                             Foreground="{StaticResource NeutralWhiteBrush}"
                             FontSize="28"
@@ -230,7 +201,8 @@
                         FontFamily="Montserrat"
                         FontSize="16"
                         FontWeight="Medium"
-                        Foreground="{StaticResource PrimaryHoverBrush}">
+                        Foreground="{StaticResource NeutralWhiteBrush}"
+                        BorderBrush="{StaticResource PrimaryBrush}">
 
                         <Button.Style>
                             <Style TargetType="Button">
