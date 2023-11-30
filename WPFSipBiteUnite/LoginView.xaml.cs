@@ -43,7 +43,10 @@ namespace WPFSipBiteUnite
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            // Логіка переходу до вікна реєстрації
+            RegisterView registerWindow = new RegisterView();
+            registerWindow.Show();
+            this.Close();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

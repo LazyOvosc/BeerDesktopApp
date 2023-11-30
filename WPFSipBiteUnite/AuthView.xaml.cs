@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPFSipBiteUnite
 {
     /// <summary>
-    /// Interaction logic for RegisterView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class RegisterView : Window
+    public partial class AuthView : Window
     {
-        public RegisterView()
+        public AuthView()
         {
             InitializeComponent();
         }
@@ -38,10 +40,7 @@ namespace WPFSipBiteUnite
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            // Логіка переходу до вікна логіну
-            LoginView loginWindow = new LoginView();
-            loginWindow.Show();
-            this.Close();
+
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
