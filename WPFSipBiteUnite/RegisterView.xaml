@@ -20,6 +20,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSipBiteUnite"
+        xmlns:viewModel="clr-namespace:WPFSipBiteUnite.ViewModel"
+        xmlns:customControls="clr-namespace:WPFSipBiteUnite.CustomControls"
         mc:Ignorable="d"
         Title="RegisterView" Height="540" Width="804"
         WindowStyle="None"
@@ -28,51 +30,60 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
+    <Window.DataContext>
+        <viewModel:RegistrationViewModel />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}" />
+    </Window.Visibility>
 
     <Border CornerRadius="14"
             BorderThickness="2">
 
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="{StaticResource Primary}" Offset="0"/>
-                <GradientStop Color="{StaticResource PrimaryHover}" Offset="0.75"/>
+                <GradientStop Color="{StaticResource Primary}" Offset="0" />
+                <GradientStop Color="{StaticResource PrimaryHover}" Offset="0.75" />
             </LinearGradientBrush>
         </Border.BorderBrush>
 
         <Border.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                <GradientStop Color="{StaticResource Neutral900}" Offset="0"/>
-                <GradientStop Color="#111111" Offset="1"/>
+                <GradientStop Color="{StaticResource Neutral900}" Offset="0" />
+                <GradientStop Color="#111111" Offset="1" />
             </LinearGradientBrush>
         </Border.Background>
 
 
-
-
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="56"/>
-                <RowDefinition/>
+                <RowDefinition Height="56" />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0"
                   VerticalAlignment="Top"
                   Margin="0, 8, 0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="25"/>
-                    <ColumnDefinition Width="25"/>
-                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="5" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Реєстрація"
-                            Foreground="{StaticResource Neutral700Brush}"
-                            FontSize="10"
-                            FontFamily="Montserrat"
-                            FontWeight="Medium"
-                            Grid.Column="0"
-                            VerticalAlignment="Center"
-                            Margin="10,0,0,0"/>
-                
-                <Button x:Name="btnClose"                          
+                           Foreground="{StaticResource Neutral700Brush}"
+                           FontSize="10"
+                           FontFamily="Montserrat"
+                           FontWeight="Medium"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0" />
+
+                <Button x:Name="btnClose"
                         BorderThickness="0"
                         Content="X"
                         Foreground="{StaticResource NeutralWhiteBrush}"
@@ -83,10 +94,10 @@
                         Click="btnClose_Click">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="{StaticResource Neutral700Brush}"/>
+                            <Setter Property="Background" Value="{StaticResource Neutral700Brush}" />
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="{StaticResource Neutral800Brush}"/>
+                                    <Setter Property="Background" Value="{StaticResource Neutral800Brush}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -97,7 +108,7 @@
                                     CornerRadius="10"
                                     Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"/>
+                                                  HorizontalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
@@ -108,71 +119,66 @@
                         Orientation="Vertical"
                         Margin="0,12,0,0">
                 <TextBlock Text="Реєстрація"
-                            Foreground="{StaticResource NeutralWhiteBrush}"
-                            FontSize="28"
-                            FontWeight="Bold"
-                            FontFamily="Montserrat"
-                            HorizontalAlignment="Left"/>
+                           Foreground="{StaticResource NeutralWhiteBrush}"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           FontFamily="Montserrat"
+                           HorizontalAlignment="Left" />
                 <TextBlock Text="Поринь у світ пива, оцінивши власні вподобання"
-                            Foreground="{StaticResource Neutral400Brush}"
-                            FontSize="14"
-                            FontFamily="Montserrat"
-                            TextWrapping="Wrap"
-                            Margin="0,4,0,0"/>
+                           Foreground="{StaticResource Neutral400Brush}"
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           TextWrapping="Wrap"
+                           Margin="0,4,0,0" />
                 <TextBlock Text="Електронна пошта"
-                            FontSize="14"
-                            FontFamily="Montserrat"                             
-                            Margin="0,28,0,0" FontWeight="Medium">
+
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           Margin="0,28,0,0" FontWeight="Medium">
                     <TextBlock.Foreground>
-                        <SolidColorBrush Color="{DynamicResource Neutral400}"/>
+                        <SolidColorBrush Color="{DynamicResource Neutral400}" />
                     </TextBlock.Foreground>
                 </TextBlock>
                 <TextBox x:Name="txtUser"
-                            FontSize="14"
-                            FontWeight="Medium"
-                            FontFamily="Montserrat"                            
-                            Foreground="{StaticResource NeutralWhiteBrush}"
-                            Background="Transparent"
-                            CaretBrush="{StaticResource Neutral400Brush}"
-                            BorderThickness="0,0,0,2"
-                            Height="28"
-                            VerticalContentAlignment="Center"
-                            Margin="0,8,0,0"
-                            Padding="0,0,0,0" TextChanged="txtUser_TextChanged">
+                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                         FontSize="14"
+                         FontWeight="Medium"
+                         FontFamily="Montserrat"
+                         Foreground="{StaticResource NeutralWhiteBrush}"
+                         Background="Transparent"
+                         CaretBrush="{StaticResource Neutral400Brush}"
+                         BorderThickness="0,0,0,2"
+                         Height="28"
+                         VerticalContentAlignment="Center"
+                         Margin="0,8,0,0"
+                         Padding="0,0,0,0" TextChanged="txtUser_TextChanged">
                     <TextBox.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource Neutral400}"/>
+                        <SolidColorBrush Color="{DynamicResource Neutral400}" />
                     </TextBox.BorderBrush>
 
                 </TextBox>
                 <TextBlock Text="Пароль"
-                            FontSize="14"
-                            FontFamily="Montserrat"                             
-                            Margin="0,32,0,0" FontWeight="Medium">
+                           FontSize="14"
+                           FontFamily="Montserrat"
+                           Margin="0,32,0,0" FontWeight="Medium">
                     <TextBlock.Foreground>
-                        <SolidColorBrush Color="{DynamicResource Neutral400}"/>
+                        <SolidColorBrush Color="{DynamicResource Neutral400}" />
                     </TextBlock.Foreground>
                 </TextBlock>
-                <PasswordBox x:Name="txtPass"
-                            FontSize="14"
-                            FontWeight="Medium"
-                            FontFamily="Montserrat"                            
-                            Foreground="{StaticResource NeutralWhiteBrush}"
-                            CaretBrush="{StaticResource Neutral400Brush}"
-                            Background="Transparent"
-                            BorderThickness="0,0,0,2"
-                            Height="28"
-                            VerticalContentAlignment="Center"
-                            Margin="0,8,0,0"
-                            Padding="0,0,0,0">
-                    <PasswordBox.BorderBrush>
-                        <SolidColorBrush Color="{DynamicResource Neutral400}"/>
-                    </PasswordBox.BorderBrush>
-                </PasswordBox>
+                <customControls:BindablePasswordBox
+                    Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+
+                    Height="28"
+                    Margin="0,8,0,0">
+                </customControls:BindablePasswordBox>
+                <TextBlock Text="{Binding ErrorMessage}" Foreground="{StaticResource FunctionalRedBrush}"></TextBlock>
+
 
                 <Button x:Name="btnRegister"
-                        Content="Зареєструватися"  
+                        Content="Зареєструватися"
                         Margin="0,48,0,0"
                         Cursor="Hand"
+                        Command="{Binding RegisterCommand}"
                         Click="btnRegister_Click"
                         Height="44"
                         FontFamily="Montserrat"
@@ -181,10 +187,10 @@
                         Foreground="{StaticResource NeutralWhiteBrush}">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                            <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="{StaticResource PrimaryHoverBrush}"/>
+                                    <Setter Property="Background" Value="{StaticResource PrimaryHoverBrush}" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -195,25 +201,26 @@
                             <Border CornerRadius="6"
                                     Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"/>
+                                                  HorizontalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
 
                 </Button>
 
-                <StackPanel Margin="0,32,0,0" Orientation="Horizontal" Width="380" Height="44" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel Margin="0,32,0,0" Orientation="Horizontal" Width="380" Height="44"
+                            HorizontalAlignment="Center" VerticalAlignment="Top">
                     <TextBlock Text="Вже зареєстровані?"
-                            Foreground="{StaticResource Neutral400Brush}"
-                            FontSize="14"
-                            FontFamily="Montserrat"
-                            TextWrapping="Wrap" VerticalAlignment="Center"/>
+                               Foreground="{StaticResource Neutral400Brush}"
+                               FontSize="14"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap" VerticalAlignment="Center" />
 
-                    <Button x:Name="btnLogin"
-                            Content="Увійти" 
+                    <Button x:Name="ButtonRegister"
+                            Content="Увійти"
                             Margin="53,0,0,0"
                             Cursor="Hand"
-                            Click="btnLogin_Click" 
+                            Click="btnLogin_Click"
                             Width="200"
                             Height="44"
                             FontFamily="Montserrat"
@@ -223,10 +230,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="{StaticResource Neutral900Brush}"/>
+                                <Setter Property="Background" Value="{StaticResource Neutral900Brush}" />
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="{StaticResource Neutral700Brush}"/>
+                                        <Setter Property="Background" Value="{StaticResource Neutral700Brush}" />
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -236,10 +243,10 @@
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="6"
                                         BorderThickness="2"
-                                        Background="{TemplateBinding Background}" 
+                                        Background="{TemplateBinding Background}"
                                         BorderBrush="{TemplateBinding BorderBrush}">
                                     <ContentPresenter VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
+                                                      HorizontalAlignment="Center" />
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
@@ -253,4 +260,3 @@
 
     </Border>
 </Window>
-

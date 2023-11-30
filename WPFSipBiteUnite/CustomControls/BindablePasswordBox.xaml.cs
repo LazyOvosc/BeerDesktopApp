@@ -6,11 +6,11 @@ namespace WPFSipBiteUnite.CustomControls;
 
 public partial class BindablePasswordBox : UserControl
 {
-    public static readonly DependencyProperty PasswordProperty = DependencyProperty.Register("Password", typeof(SecureString), typeof(BindablePasswordBox));
+    public static readonly DependencyProperty PasswordProperty = DependencyProperty.Register("Password", typeof(string), typeof(BindablePasswordBox));
 
-    public SecureString Password
+    public string Password
     {
-        get { return (SecureString)GetValue(PasswordProperty); }
+        get { return (string)GetValue(PasswordProperty); }
         set{SetValue(PasswordProperty, value);}
     }
     public BindablePasswordBox()
@@ -21,6 +21,6 @@ public partial class BindablePasswordBox : UserControl
 
     private void onPasswordChange(object sender, RoutedEventArgs e)
     {
-        Password = TxtPasswordBox.SecurePassword;
+        Password = TxtPasswordBox.Password;
     }
 }

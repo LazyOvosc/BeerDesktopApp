@@ -1,8 +1,4 @@
-﻿using System;
-using System.Security;
-using System.Security.Principal;
-using System.Threading;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using WPFSipBiteUnite.DataBaseClasses;
 using WPFSipBiteUnite.Repositories;
 using WPFSipBiteUnite.DbContext;
@@ -10,7 +6,7 @@ using WPFSipBiteUnite.DbContext;
 
 namespace WPFSipBiteUnite.ViewModel
 {
-    public class LoginViewModel:ViewModelBase
+    public class RegistrationViewModel:ViewModelBase
     {
         public string Username
         {
@@ -56,17 +52,17 @@ namespace WPFSipBiteUnite.ViewModel
         private string _password;
         private string _errorMessage;
         private bool _isViewVisible = true;
-        private IUserRepository userRepository;
+        private IUserRepository _userRepository;
         
-        public ICommand LoginCommand { get; }
+        public ICommand RegisterCommand { get; }
 
-        public LoginViewModel()
+        public RegistrationViewModel()
         {
-            LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            userRepository = new UserRepository(new ApplicationDbContext());
+            RegisterCommand = new ViewModelCommand(ExecuteRegisterCommand, CanExecuteRegisterCommand);
+            _userRepository = new UserRepository(new ApplicationDbContext());
         }
 
-        private bool CanExecuteLoginCommand(object obj)
+        private bool CanExecuteRegisterCommand(object obj)
         {
             bool validData;
             if (string.IsNullOrWhiteSpace(Username) || Username.Length < 3 || Password == null || Password.Length<3)
@@ -81,21 +77,9 @@ namespace WPFSipBiteUnite.ViewModel
             return validData;
         }
 
-        private void ExecuteLoginCommand(object obj)
+        private void ExecuteRegisterCommand(object obj)
         {
-            var user = userRepository.GetUserByName(Username);
-            if (user is not null)
-            {
-                if (user.password == Password)
-                {
-                    Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(Username), null);
-                    IsViewVisible = false;
-                }
-                else
-                {
-                    ErrorMessage = "* Invalid username or password";
-                }
-            }
+            _userRepository.AddUser( new User{name = Username, password = Password});
         }
     }
 }

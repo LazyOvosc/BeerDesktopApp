@@ -3,10 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             DataContext="{}"
              xmlns:local="clr-namespace:WPFSipBiteUnite"
+             xmlns:viewModel="clr-namespace:WPFSipBiteUnite.ViewModel"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="572"
-             Background="Transparent">
+             Background="Transparent"
+             d:DataContext="{d:DesignInstance Type=viewModel:ProfileViewModel}"
+             >
+    
+    
     <StackPanel HorizontalAlignment="Left"
                 VerticalAlignment="Top">
         <TextBlock Text="Авторизуйся та поринь у світ пива, отримай можливість оцінювати самки"
@@ -16,6 +22,16 @@
                    FontWeight="Normal"
                    Foreground="{StaticResource NeutralWhiteBrush}">
         </TextBlock>
+        
+        <TextBlock Text="{Binding User.DisplayName  }"
+                   TextWrapping="Wrap"
+                   FontFamily="Montserrat"
+                   FontSize="20"
+                   FontWeight="Normal"
+                   Foreground="{StaticResource NeutralWhiteBrush}">
+        </TextBlock>
+        
+        
 
         <Button x:Name="btnRegisterOrLogin"
                 Content="Поринути у світ пива"

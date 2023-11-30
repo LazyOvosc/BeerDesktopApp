@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WPFSipBiteUnite"
+        xmlns:viewModel="clr-namespace:WPFSipBiteUnite.ViewModel"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="ProfileView" Height="640" Width="1004"
@@ -13,6 +14,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
+    
     <Border CornerRadius="14"
             BorderThickness="2">
 
@@ -190,6 +192,12 @@
                             VerticalAlignment="Top">
                             <TextBlock
                                 Text="Профіль"
+                                FontFamily="Montserrat"
+                                FontSize="28"
+                                FontWeight="Medium"
+                                Foreground="{StaticResource NeutralWhiteBrush}"></TextBlock>
+                            
+                            <TextBlock
                                 FontFamily="Montserrat"
                                 FontSize="28"
                                 FontWeight="Medium"
