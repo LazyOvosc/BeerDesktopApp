@@ -3,10 +3,8 @@ using System.Security;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Input;
-using WPFSipBiteUnite.DataBaseClasses;
-using WPFSipBiteUnite.Repositories;
-using WPFSipBiteUnite.DbContext;
-
+using DALSipBiteUnite.DbContext;
+using DALSipBiteUnite.Repositories;
 
 namespace WPFSipBiteUnite.ViewModel
 {
@@ -56,7 +54,7 @@ namespace WPFSipBiteUnite.ViewModel
         private string _password;
         private string _errorMessage;
         private bool _isViewVisible = true;
-        private IUserRepository userRepository;
+        private UserRepository userRepository;
         
         public ICommand LoginCommand { get; }
 
@@ -86,7 +84,7 @@ namespace WPFSipBiteUnite.ViewModel
             var user = userRepository.GetUserByName(Username);
             if (user is not null)
             {
-                if (user.password == Password)
+                if (user.UserPassword == Password)
                 {
                     Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(Username), null);
                     IsViewVisible = false;

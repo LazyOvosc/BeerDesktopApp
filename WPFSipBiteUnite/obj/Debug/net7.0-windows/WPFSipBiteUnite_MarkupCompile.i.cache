@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\App.xaml
-61167665380
+17-2077395145
 
-6-1987203550
-198-651932399
-AllBeersPage.xaml;AllBeersWindow.xaml;Colors.xaml;CustomButtons.xaml;CustomInput.xaml;CustomNavigation.xaml;
+26-2072655655
+227-1957940704
+AllBeersPage.xaml;AllBeersWindow.xaml;AuthView.xaml;BeersExploreView.xaml;CustomButtons.xaml;CustomCardSmall.xaml;CustomControls\BindablePasswordBox.xaml;CustomInput.xaml;CustomNavButtons.xaml;DishesExploreView.xaml;LoginView.xaml;MainView.xaml;ProfileView.xaml;RegisterView.xaml;SignedProfileView.xaml;UIColors.xaml;UnsignedProfileView.xaml;
 
-True
+False
 

@@ -46,7 +46,9 @@ namespace WPFSipBiteUnite
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginView loginWindow = new LoginView();
+            loginWindow.Show();
+            this.Close();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

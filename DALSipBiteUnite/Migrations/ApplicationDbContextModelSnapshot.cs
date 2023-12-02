@@ -163,14 +163,6 @@ namespace DALSipBiteUnite.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("UserLogin")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("UserPassword")
                         .IsRequired()
                         .HasColumnType("text");

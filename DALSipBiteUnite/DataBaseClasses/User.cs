@@ -12,10 +12,6 @@ namespace DALSipBiteUnite.DataBaseClasses
         [Key]
         public int UserId { get; set; }
         [Required]
-        public string UserName { get; set; }
-        [Required]
-        public string UserLogin { get; set; }
-        [Required]
         public string UserPassword { get; set; }
         [Required]
         [EmailAddress]

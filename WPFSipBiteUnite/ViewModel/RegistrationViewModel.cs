@@ -1,8 +1,7 @@
 ﻿using System.Windows.Input;
-using WPFSipBiteUnite.DataBaseClasses;
-using WPFSipBiteUnite.Repositories;
-using WPFSipBiteUnite.DbContext;
-
+using DALSipBiteUnite.DbContext;
+using DALSipBiteUnite.Repositories;
+using DALSipBiteUnite.DataBaseClasses;
 
 namespace WPFSipBiteUnite.ViewModel
 {
@@ -79,7 +78,7 @@ namespace WPFSipBiteUnite.ViewModel
 
         private void ExecuteRegisterCommand(object obj)
         {
-            _userRepository.AddUser( new User{name = Username, password = Password});
+            _userRepository.AddUser( new User{UserEmail = Username, UserPassword = Password});
         }
     }
 }

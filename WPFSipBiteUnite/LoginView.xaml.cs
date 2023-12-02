@@ -38,7 +38,17 @@ namespace WPFSipBiteUnite
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                MainView mainWindow = new MainView();
+                mainWindow.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle or log the exception
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)

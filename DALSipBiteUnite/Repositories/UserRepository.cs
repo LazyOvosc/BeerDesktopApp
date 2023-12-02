@@ -57,5 +57,10 @@ namespace DALSipBiteUnite.Repositories
         {
             return _context.Users.ToList();
         }
+
+        public User GetUserByName(string name)
+        {
+            return _context.Users.First(u => u.UserEmail == name);
+        }
     }
 }
