@@ -158,6 +158,7 @@
                 <Button x:Name="btnLogin"
                         Command="{Binding LoginCommand}"
                         Content="Увійти"
+                        Click="btnLogin_Click"
                         Margin="0,48,0,0"
                         Cursor="Hand"
                         Height="44"

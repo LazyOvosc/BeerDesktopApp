@@ -63,7 +63,5 @@ namespace WPFSipBiteUnite
         {
             Application.Current.Shutdown();
         }
-
-
     }
 }
