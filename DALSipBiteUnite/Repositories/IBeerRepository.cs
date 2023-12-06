@@ -1,13 +1,12 @@
-﻿using DALSipBiteUnite.DbContext;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DALSipBiteUnite.DataBaseClasses;
+﻿// <copyright file="BeerRepository.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace DALSipBiteUnite.Repositories
 {
+    using DALSipBiteUnite.DataBaseClasses;
+    using DALSipBiteUnite.DbContext;
+
     public interface IBeerRepository
     {
         void AddBeer(Beer beer);

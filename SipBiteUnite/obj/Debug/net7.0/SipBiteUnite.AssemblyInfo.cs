@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SipBiteUnite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a553a81769fa47c3a7c68adbe6c16c4e21a43085")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8006624dd1c78ca9e98ca9f73c1a7438b7f4dd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SipBiteUnite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SipBiteUnite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
