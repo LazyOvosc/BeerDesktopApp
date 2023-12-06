@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rC9nYbUJaZOnKFohiHRAFm/1h/AfMYHmK8S8X7og2X3ve76IKggzwWI8Fuf2zekOaBj/M7aCEGrSj6tgZ0tbpQ==",
+  "dgSpecHash": "ICCsmHWEe5xn0Uasj16j8VNfZa2RluoRj1FJoD080QpVCz5jpoTefHugurZCK8r7q7S1rOMzDGL02Dzx/IgMNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\SipBiteUnite\\SipBiteUnite.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\dimon\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
+    "C:\\Users\\dimon\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

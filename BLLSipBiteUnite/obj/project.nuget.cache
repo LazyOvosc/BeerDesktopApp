@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iwe6Z1PPMIUqw7eJyvp/U72+hK5vzg5MaIgGNAXRsxwl1ZFOAiua4LcP5c3AmOVXkm/eNDoxDZaETZ1LDif6QA==",
+  "dgSpecHash": "yiF1YsiKcPPaKmiRLmrT7Fk2BfRZSc3nX46/hYZp7kFVSijf8TBNOV5c9nWiTxUZwtRR4OnBkA9cfC7s+8MUCQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,8 @@
     "C:\\Users\\dimon\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\dimon\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\dimon\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
+    "C:\\Users\\dimon\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
+    "C:\\Users\\dimon\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
   ],
   "logs": []
 }

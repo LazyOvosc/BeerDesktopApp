@@ -11,7 +11,8 @@
           "DALSipBiteUnite": "1.0.0",
           "FontAwesome.Sharp": "6.3.0",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "7.0.5",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
+          "StyleCop.Analyzers": "1.1.118"
         },
         "runtime": {
           "WPFSipBiteUnite.dll": {}
@@ -231,6 +232,7 @@
           }
         }
       },
+      "StyleCop.Analyzers/1.1.118": {},
       "System.Memory/4.5.3": {},
       "System.Text.Encodings.Web/7.0.0": {},
       "System.Text.Json/7.0.0": {
@@ -394,6 +396,13 @@
       "sha512": "sha512-inBjvSHo9UDKneGNzfUfDjK08JzlcIhn1+SP5Y3m6cgXpCxXKCJDy6Mka7LpgSV+UZmKSnC8rTwB0SQ0xKu5pA==",
       "path": "sqlitepclraw.core/2.1.4",
       "hashPath": "sqlitepclraw.core.2.1.4.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",
