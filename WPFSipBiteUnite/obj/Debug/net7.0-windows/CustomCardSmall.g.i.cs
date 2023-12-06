@@ -53,7 +53,7 @@ namespace WPFSipBiteUnite {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;V1.0.0.0;component/customcardsmall.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;component/customcardsmall.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CustomCardSmall.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

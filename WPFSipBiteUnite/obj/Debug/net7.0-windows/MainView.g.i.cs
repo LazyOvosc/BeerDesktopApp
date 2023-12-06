@@ -33,7 +33,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using WPFSipBiteUnite;
-using WPFSipBiteUnite.CustomControls;
 using WPFSipBiteUnite.ViewModel;
 
 
@@ -81,7 +80,7 @@ namespace WPFSipBiteUnite {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;V1.0.0.0;component/mainview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;component/mainview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

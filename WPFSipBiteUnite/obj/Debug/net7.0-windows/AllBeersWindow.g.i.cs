@@ -62,7 +62,7 @@ namespace WPFSipBiteUnite {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;V1.0.0.0;component/allbeerswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;component/allbeerswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AllBeersWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

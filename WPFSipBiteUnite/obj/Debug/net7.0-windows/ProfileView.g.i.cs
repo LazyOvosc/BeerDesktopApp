@@ -80,7 +80,7 @@ namespace WPFSipBiteUnite {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;V1.0.0.0;component/profileview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;component/profileview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ProfileView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

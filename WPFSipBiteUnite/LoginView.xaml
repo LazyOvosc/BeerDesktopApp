@@ -161,7 +161,6 @@
                         Click="btnLogin_Click"
                         Margin="0,48,0,0"
                         Cursor="Hand"
-                        Click="btnLogin_Click"
                         Height="44"
                         FontFamily="Montserrat"
                         FontSize="16"

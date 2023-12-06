@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DALSipBiteUnite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231202115818_InitialData")]
+    [Migration("20231206213438_InitialData")]
     partial class InitialData
     {
         /// <inheritdoc />

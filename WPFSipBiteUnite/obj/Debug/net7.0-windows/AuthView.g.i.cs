@@ -87,7 +87,7 @@ namespace WPFSipBiteUnite {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;V1.0.0.0;component/authview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSipBiteUnite;component/authview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AuthView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
