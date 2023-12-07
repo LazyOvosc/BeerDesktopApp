@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DALSipBiteUnite.DataBaseClasses;
-using DALSipBiteUnite.DbContext;
+﻿// <copyright file="ShopBeerPriceRepository.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace DALSipBiteUnite.Repositories
 {
-    public interface IShopBeerPriceRepository
-    {
-        void AddShopBeerPrice(ShopBeerPrice shopBeerPrice);
-        void UpdateShopBeerPrice(ShopBeerPrice shopBeerPrice);
-        void DeleteShopBeerPrice(int shopBeerPriceId);
-        ShopBeerPrice GetShopBeerPriceById(int shopBeerPriceId);
-        List<ShopBeerPrice> GetAllShopBeerPrices();
-    }
+    using DALSipBiteUnite.DataBaseClasses;
+    using DALSipBiteUnite.DbContext;
 
     public class ShopBeerPriceRepository : IShopBeerPriceRepository
     {
