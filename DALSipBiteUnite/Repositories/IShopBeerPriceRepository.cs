@@ -34,7 +34,7 @@ namespace DALSipBiteUnite.Repositories
         /// </summary>
         /// <param name="shopBeerPriceId">The unique identifier of the shop beer price to retrieve.</param>
         /// <returns>The specified <see cref="ShopBeerPrice"/> or <c>null</c> if not found.</returns>
-        ShopBeerPrice GetShopBeerPriceById(int shopBeerPriceId);
+        ShopBeerPrice? GetShopBeerPriceById(int shopBeerPriceId);
 
         /// <summary>
         /// Retrieves a list of all shop beer prices from the repository.
