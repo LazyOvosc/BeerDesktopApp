@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {}
+    "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
+    "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
+        "projectUniqueName": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
         "projectName": "DALSipBiteUnite",
-        "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
-        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\obj\\",
+        "projectPath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
+        "packagesPath": "C:\\Users\\dimon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\dimon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,12 +44,6 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -64,6 +53,12 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
             }
           },
           "imports": [
@@ -82,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

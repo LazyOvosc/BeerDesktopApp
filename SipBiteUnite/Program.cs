@@ -1,14 +1,17 @@
-﻿using System;
-using Npgsql;
-using SipBiteUnite.Models;
-using System.Text;
-using Bogus;
-
-namespace SipBiteUnite
+﻿namespace SipBiteUnite
 {
+    using System;
+    using System.Text;
+    using Bogus;
+    using Npgsql;
+    using SipBiteUnite.Models;
+
     internal class Program
     {
-        #region InsertData
+        public Program()
+        {
+        }
+
         public static void InsertRandomDataIntoBeers(int numberOfRecords)
         {
             var faker = new Faker<Beer>()
@@ -140,11 +143,11 @@ namespace SipBiteUnite
         public static void InsertRandomDataIntoShopssum(int numberOfRecords)
         {
             var shopIds = GetShopIdsFromDatabase();
-            var BeerId = GetBeerIdsFromDatabase();
+            var beerId = GetBeerIdsFromDatabase();
 
             var faker = new Faker<Shopssum>()
                 .RuleFor(s => s.ShopId, f => f.PickRandom(shopIds))
-                .RuleFor(s => s.BeerId, f => f.PickRandom(BeerId))
+                .RuleFor(s => s.BeerId, f => f.PickRandom(beerId))
                 .RuleFor(s => s.Price, f => f.Random.Decimal(1, 1000))
                 .RuleFor(s => s.Url, f => f.Internet.Url());
 
@@ -198,7 +201,7 @@ namespace SipBiteUnite
         }
         private static List<int> GetBeerIdsFromDatabase()
         {
-            List<int> BeerId = new List<int>();
+            List<int> beerId = new List<int>();
 
             using (NpgsqlConnection connection = new NpgsqlConnection("Host=127.0.0.1;Port=5432;Database=SipByteDatabase;Username=postgres;Password=admin"))
             {
@@ -210,7 +213,7 @@ namespace SipBiteUnite
                     {
                         while (reader.Read())
                         {
-                            BeerId.Add(reader.GetInt32(0));
+                            beerId.Add(reader.GetInt32(0));
                         }
                     }
                 }
@@ -218,7 +221,7 @@ namespace SipBiteUnite
                 connection.Close();
             }
 
-            return BeerId;
+            return beerId;
         }
         public static void InsertRandomDataIntoShops(int numberOfRecords)
         {
@@ -246,7 +249,6 @@ namespace SipBiteUnite
                 connection.Close();
             }
         }
-        #endregion
 
         #region DeleteData
         public static void DeleteBeerAndRelatedRecords(int beerId)

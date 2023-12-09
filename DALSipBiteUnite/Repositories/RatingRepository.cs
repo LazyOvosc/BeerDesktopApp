@@ -1,61 +1,79 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DALSipBiteUnite.DataBaseClasses;
-using DALSipBiteUnite.DbContext;
+﻿// <copyright file="RatingRepository.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace DALSipBiteUnite.Repositories
 {
-    public interface IRatingRepository
-    {
-        void AddRating(Rating rating);
-        void UpdateRating(Rating rating);
-        void DeleteRating(int ratingId);
-        Rating GetRatingById(int ratingId);
-        List<Rating> GetAllRatings();
-    }
+    using DALSipBiteUnite.DataBaseClasses;
+    using DALSipBiteUnite.DbContext;
 
+    /// <summary>
+    /// Repository for managing rating-related operations.
+    /// </summary>
     public class RatingRepository : IRatingRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext context;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RatingRepository"/> class.
+        /// </summary>
+        /// <param name="context">The database context.</param>
         public RatingRepository(ApplicationDbContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
+        /// <summary>
+        /// Adds a new rating to the database.
+        /// </summary>
+        /// <param name="rating">rating id.</param>
         public void AddRating(Rating rating)
         {
-            _context.Ratings.Add(rating);
-            _context.SaveChanges();
+            this.context.Ratings.Add(rating);
+            this.context.SaveChanges();
         }
 
+        /// <summary>
+        /// Updates an existing rating in the database.
+        /// </summary>
+        /// <param name="rating">rating id.</param>
         public void UpdateRating(Rating rating)
         {
-            _context.Ratings.Update(rating);
-            _context.SaveChanges();
+            this.context.Ratings.Update(rating);
+            this.context.SaveChanges();
         }
 
+        /// <summary>
+        /// Deletes a rating from the database based on its unique identifier.
+        /// </summary>
+        /// <param name="ratingId">rating id.</param>
         public void DeleteRating(int ratingId)
         {
-            var rating = _context.Ratings.Find(ratingId);
+            var rating = this.context.Ratings.Find(ratingId);
             if (rating != null)
             {
-                _context.Ratings.Remove(rating);
-                _context.SaveChanges();
+                this.context.Ratings.Remove(rating);
+                this.context.SaveChanges();
             }
         }
 
-        public Rating GetRatingById(int ratingId)
+        /// <summary>
+        /// Retrieves a rating from the database based on its unique identifier.
+        /// </summary>
+        /// <param name="ratingId">rating id.</param>
+        /// <returns>The specified <see cref="Rating"/> or <c>null</c> if not found.</returns>
+        public Rating? GetRatingById(int ratingId)
         {
-            return _context.Ratings.Find(ratingId);
+            return this.context.Ratings.Find(ratingId);
         }
 
+        /// <summary>
+        /// Retrieves a list of all ratings from the database.
+        /// </summary>
+        /// <returns>A <see cref="List{T}"/> of <see cref="Rating"/> objects representing all available ratings.</returns>
         public List<Rating> GetAllRatings()
         {
-            return _context.Ratings.ToList();
+            return this.context.Ratings.ToList();
         }
     }
 }

@@ -1,10 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+﻿// <copyright file="20231206213438_InitialData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 #nullable disable
 
 namespace DALSipBiteUnite.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+    using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+
     /// <inheritdoc />
     public partial class InitialData : Migration
     {
@@ -21,7 +25,7 @@ namespace DALSipBiteUnite.Migrations
                     BeerType = table.Column<string>(type: "text", nullable: false),
                     BeerProducer = table.Column<string>(type: "text", nullable: false),
                     BeerDescription = table.Column<string>(type: "text", nullable: false),
-                    BeerPhotoURL = table.Column<string>(type: "text", nullable: false)
+                    BeerPhotoURL = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -37,7 +41,7 @@ namespace DALSipBiteUnite.Migrations
                     FoodName = table.Column<string>(type: "text", nullable: false),
                     FoodCategory = table.Column<string>(type: "text", nullable: false),
                     FoodDescription = table.Column<string>(type: "text", nullable: false),
-                    FoodPhotoURL = table.Column<string>(type: "text", nullable: false)
+                    FoodPhotoURL = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -53,7 +57,7 @@ namespace DALSipBiteUnite.Migrations
                     BeerId = table.Column<int>(type: "integer", nullable: false),
                     FoodId = table.Column<int>(type: "integer", nullable: false),
                     RatingValue = table.Column<float>(type: "real", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false)
+                    UserId = table.Column<int>(type: "integer", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -69,7 +73,7 @@ namespace DALSipBiteUnite.Migrations
                     ShopId = table.Column<int>(type: "integer", nullable: false),
                     BeerId = table.Column<int>(type: "integer", nullable: false),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
-                    ShopBeerPriceURL = table.Column<string>(type: "text", nullable: false)
+                    ShopBeerPriceURL = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -82,7 +86,7 @@ namespace DALSipBiteUnite.Migrations
                 {
                     ShopId = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ShopName = table.Column<string>(type: "text", nullable: false)
+                    ShopName = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -96,7 +100,7 @@ namespace DALSipBiteUnite.Migrations
                     UserId = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserPassword = table.Column<string>(type: "text", nullable: false),
-                    UserEmail = table.Column<string>(type: "text", nullable: false)
+                    UserEmail = table.Column<string>(type: "text", nullable: false),
                 },
                 constraints: table =>
                 {

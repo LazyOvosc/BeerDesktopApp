@@ -1,17 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="Shop.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace DALSipBiteUnite.DataBaseClasses
 {
+    using System.ComponentModel.DataAnnotations;
+
+    /// <summary>
+    /// Shop base class.
+    /// </summary>
     public class Shop
     {
+        /// <summary>
+        /// Gets or sets ShopId.
+        /// </summary>
         [Key]
         public int ShopId { get; set; }
+
+        /// <summary>
+        /// Gets or sets ShopName.
+        /// </summary>
         [Required]
-        public string ShopName { get; set; }
+        public string? ShopName { get; set; }
     }
 }
