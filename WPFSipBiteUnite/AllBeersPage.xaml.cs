@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFSipBiteUnite.ViewModel;
 
 namespace WPFSipBiteUnite
 {
@@ -22,6 +23,7 @@ namespace WPFSipBiteUnite
         public AllBeersPage()
         {
             InitializeComponent();
+            DataContext = new BeersExploreViewModel();
             BeerButton.IsChecked = true;
             FoodButton.IsChecked = false;
             ProfileButton.IsChecked = false;

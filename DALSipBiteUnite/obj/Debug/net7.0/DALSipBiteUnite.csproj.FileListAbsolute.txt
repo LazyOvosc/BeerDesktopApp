@@ -27,3 +27,17 @@ C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\DALSipBiteUni
 C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.pdb
 C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.genruntimeconfig.cache
 C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\ref\DALSipBiteUnite.dll
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.deps.json
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.runtimeconfig.json
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.dll
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\bin\Debug\net7.0\DALSipBiteUnite.pdb
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.csproj.AssemblyReference.cache
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.AssemblyInfoInputs.cache
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.AssemblyInfo.cs
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.csproj.CoreCompileInputs.cache
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.dll
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\refint\DALSipBiteUnite.dll
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.pdb
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\DALSipBiteUnite.genruntimeconfig.cache
+C:\Users\1\Documents\GitHub\SipBiteUnite\DALSipBiteUnite\obj\Debug\net7.0\ref\DALSipBiteUnite.dll

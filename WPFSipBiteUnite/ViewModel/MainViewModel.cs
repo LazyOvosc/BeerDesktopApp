@@ -1,5 +1,8 @@
 ﻿
+using BLLSipBiteUnite.Services;
+using DALSipBiteUnite.Repositories;
 using System.Windows.Input;
+using WPFSipBiteUnite.ViewModel;
 
 namespace WPFSipBiteUnite.ViewModel
 {
@@ -10,9 +13,10 @@ namespace WPFSipBiteUnite.ViewModel
         private ViewModelBase _currentChildView;
         private string _caption;
 
+
         // private IUserRepository userRepository;
 
-        
+
         /// Properties
         // public UserAccountModel CurrentUserAccount
         // {
@@ -50,16 +54,16 @@ namespace WPFSipBiteUnite.ViewModel
 
         /// --> Commands - to show the beersexploreview...
         public ICommand ShowBeersExploreViewCommand { get; }
+        public ICommand ShowFoodsExploreViewCommand { get; }
         public ICommand ShowDishesExploreViewCommand { get; }
         public ICommand ShowUnsignedProfileViewCommand { get; }
 
         public MainViewModel()
         {
             // userRepository = new UserRepository();
-            // CurrentUserAccount = new UserAccountModel();
-
             // Initialize commands
             ShowBeersExploreViewCommand = new ViewModelCommand(ExecuteShowBeersExploreViewCommand);
+            ShowFoodsExploreViewCommand = new ViewModelCommand(ExecuteShowBeersExploreViewCommand);
             ShowDishesExploreViewCommand = new ViewModelCommand(ExecuteShowDishesExploreViewCommand);
             ShowUnsignedProfileViewCommand = new ViewModelCommand(ExecuteShowUnsignedProfileViewCommand);
 
@@ -75,13 +79,13 @@ namespace WPFSipBiteUnite.ViewModel
             Caption = "Страви";
         }
 
-        
+
         private void ExecuteShowBeersExploreViewCommand(object obj)
         {
             CurrentChildView = new BeersExploreViewModel();
             Caption = "Пиво";
         }
-        
+
         private void ExecuteShowUnsignedProfileViewCommand(object obj)
         {
             CurrentChildView = new UnsignedProfileViewModel();

@@ -25,6 +25,10 @@ namespace DALSipBiteUnite.Repositories
             _context = context;
         }
 
+        public BeerRepository()
+        {
+        }
+
         public void AddBeer(Beer beer)
         {
             _context.Beers.Add(beer);

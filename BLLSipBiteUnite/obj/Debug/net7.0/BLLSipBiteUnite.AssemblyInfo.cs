@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLLSipBiteUnite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c959af5ca491a98de4817c9d09549d102d02b470")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLLSipBiteUnite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLLSipBiteUnite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,8 +7,24 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="572">
     <Grid>
-        <TextBlock Text="Explore dishes"
-                   FontSize="50"
-                   Foreground="{StaticResource Neutral300Brush}"></TextBlock>
+        <!-- StackPanel for organization -->
+        <StackPanel>
+            <TextBlock Text="Explore dishes"
+                       FontSize="50"
+                       Foreground="{StaticResource Neutral300Brush}"/>
+
+            <!-- ItemsControl to display dishes -->
+            <ItemsControl ItemsSource="{Binding Dishes}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Customize the appearance of each dish item -->
+                        <Border BorderBrush="White" BorderThickness="1" Margin="5">
+                            <!-- Assuming Dish has a property named DishName -->
+                            <TextBlock Text="{Binding FoodName}" FontSize="16" Foreground="White" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
     </Grid>
 </UserControl>

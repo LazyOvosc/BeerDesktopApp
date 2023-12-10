@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BLLSipBiteUnite\BLLSipBiteUnite.csproj" />
     <ProjectReference Include="..\DALSipBiteUnite\DALSipBiteUnite.csproj" />
   </ItemGroup>
 
