@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\1\Documents\GitHub\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\
+C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\
 WPFSipBiteUnite
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\1\Documents\GitHub\SipBiteUnite\WPFSipBiteUnite\App.xaml
+C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\WPFSipBiteUnite\App.xaml
 17-2077395145
 
 26-2072655655
-228-882815453
+228265833670
 AllBeersPage.xaml;AllBeersWindow.xaml;AuthView.xaml;BeersExploreView.xaml;CustomButtons.xaml;CustomCardSmall.xaml;CustomControls\BindablePasswordBox.xaml;CustomInput.xaml;CustomNavButtons.xaml;DishesExploreView.xaml;LoginView.xaml;MainView.xaml;ProfileView.xaml;RegisterView.xaml;SignedProfileView.xaml;UIColors.xaml;UnsignedProfileView.xaml;
 
-False
+True
 
