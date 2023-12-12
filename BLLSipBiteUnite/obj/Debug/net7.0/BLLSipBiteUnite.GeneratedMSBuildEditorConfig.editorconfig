@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BLLSipBiteUnite
-build_property.ProjectDir = C:\Users\1\Documents\GitHub\SipBiteUnite\BLLSipBiteUnite\
+build_property.ProjectDir = C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\BLLSipBiteUnite\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

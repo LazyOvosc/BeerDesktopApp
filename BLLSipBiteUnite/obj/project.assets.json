@@ -722,26 +722,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\dimon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Documents\\GitHub\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
+      "projectUniqueName": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
       "projectName": "BLLSipBiteUnite",
-      "projectPath": "C:\\Users\\1\\Documents\\GitHub\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Documents\\GitHub\\SipBiteUnite\\BLLSipBiteUnite\\obj\\",
+      "projectPath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\BLLSipBiteUnite\\BLLSipBiteUnite.csproj",
+      "packagesPath": "C:\\Users\\dimon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\BLLSipBiteUnite\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dimon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -749,15 +742,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\1\\Documents\\GitHub\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
-              "projectPath": "C:\\Users\\1\\Documents\\GitHub\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
+            "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
+              "projectPath": "C:\\Users\\dimon\\OneDrive\\Документи\\VSProjects\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
             }
           }
         }
@@ -803,7 +795,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
