@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DALSipBiteUnite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fe42e4d4a6f412caccce574b0d6e5b81c63107c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DALSipBiteUnite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DALSipBiteUnite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
