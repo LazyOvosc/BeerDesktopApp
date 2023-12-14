@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPFSipBiteUnite
 {
@@ -49,6 +50,29 @@ namespace WPFSipBiteUnite
             LoginView loginWindow = new LoginView();
             loginWindow.Show();
             this.Close();
+        }
+
+        private void btnInfo_Click(object sender, RoutedEventArgs e)
+        {
+            // Set the alert text
+            txtAlert.Text = "Ваш пароль повинен мати мінімум 8 символів і містити хоча б одну цифру та одну букву.";
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Tick += (s, args) =>
+            {
+                txtAlert.Text = string.Empty;
+                timer.Stop();
+            };
+
+            timer.Start();
+        }
+
+
+        // Очистіть текст алерта при зміні значення пароля
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            txtAlert.Text = string.Empty;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

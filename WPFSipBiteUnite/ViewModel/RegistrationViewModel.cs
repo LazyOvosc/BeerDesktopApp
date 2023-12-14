@@ -2,6 +2,7 @@
 using DALSipBiteUnite.DbContext;
 using DALSipBiteUnite.Repositories;
 using DALSipBiteUnite.DataBaseClasses;
+using System.Text.RegularExpressions;
 
 namespace WPFSipBiteUnite.ViewModel
 {
@@ -63,14 +64,19 @@ namespace WPFSipBiteUnite.ViewModel
 
         private bool CanExecuteRegisterCommand(object obj)
         {
-            bool validData;
-            if (string.IsNullOrWhiteSpace(Username) || Username.Length < 3 || Password == null || Password.Length<3)
+            bool validData = false;
+
+            // Регулярний вираз для перевірки формату email
+            string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            // Перевірка на не null і формат email
+            if (Username != null && Regex.IsMatch(Username, emailPattern) && !string.IsNullOrWhiteSpace(Username))
             {
-                validData = false;
-            }
-            else
-            {
-                validData = true;
+                // Перевірка на умови пароля
+                if (Password != null && Password.Length >= 8 && Regex.IsMatch(Password, @"^(?=.*[A-Za-z])(?=.*\d).{8,}$"))
+                {
+                    validData = true;
+                }
             }
 
             return validData;

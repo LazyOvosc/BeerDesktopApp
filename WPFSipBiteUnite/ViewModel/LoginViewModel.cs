@@ -66,18 +66,21 @@ namespace WPFSipBiteUnite.ViewModel
 
         private bool CanExecuteLoginCommand(object obj)
         {
-            bool validData;
-            if (string.IsNullOrWhiteSpace(Username) || Username.Length < 3 || Password == null || Password.Length<3)
+            bool validData = false;
+
+            // Перевірка на не null і формат email
+            if (Username != null && !string.IsNullOrWhiteSpace(Username))
             {
-                validData = false;
-            }
-            else
-            {
-                validData = true;
+                // Перевірка на умови пароля
+                if (Password != null && Password.Length >= 8)
+                {
+                    validData = true;
+                }
             }
 
             return validData;
         }
+
 
         private void ExecuteLoginCommand(object obj)
         {
