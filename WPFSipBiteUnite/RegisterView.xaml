@@ -157,21 +157,66 @@
                     </TextBox.BorderBrush>
 
                 </TextBox>
-                <TextBlock Text="Пароль"
-                           FontSize="14"
-                           FontFamily="Montserrat"
-                           Margin="0,32,0,0" FontWeight="Medium">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{DynamicResource Neutral400}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
+                <StackPanel Margin="0,32,0,0" Orientation="Horizontal" Width="380" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Пароль"
+                       FontSize="14"
+                       FontFamily="Montserrat"
+                       Margin="0,8,0,0" FontWeight="Medium">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource Neutral400}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    
+
+                    <Button Content="?"
+                        Width="28"
+                        Height="28"
+                        FontFamily="Montserrat"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource NeutralWhiteBrush}"
+                        Background="{StaticResource PrimaryBrush}"
+                        BorderThickness="0"
+                        Margin="24,0,0,0"
+                        Click="btnInfo_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}"
+                                                CornerRadius="15"
+                                                BorderThickness="1"
+                                                BorderBrush="{StaticResource PrimaryBrush}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="{StaticResource PrimaryHoverBrush}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+
                 <customControls:BindablePasswordBox
                     Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-
                     Height="28"
                     Margin="0,8,0,0">
                 </customControls:BindablePasswordBox>
-                <TextBlock Text="{Binding ErrorMessage}" Foreground="{StaticResource FunctionalRedBrush}"></TextBlock>
+
+                <TextBlock x:Name="txtAlert"
+                   Text=""
+                   Foreground="{StaticResource FunctionalRedBrush}"
+                   FontSize="12"
+                   FontFamily="Montserrat"
+                   Margin="0,8,0,0"
+                   TextWrapping="Wrap" />
+
 
 
                 <Button x:Name="btnRegister"
