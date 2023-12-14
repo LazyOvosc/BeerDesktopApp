@@ -1,18 +1,28 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿// <copyright file="UnsignedProfileView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace WPFSipBiteUnite;
-
-public partial class UnsignedProfileView : UserControl
+namespace WPFSipBiteUnite
 {
-    public UnsignedProfileView()
-    {
-        InitializeComponent();
+    using System.Windows;
+    using System.Windows.Controls;
 
-    }
-
-    private void btnRegisterOrLogin_Click(object sender, RoutedEventArgs e)
+    /// <summary>
+    /// Interaction logic for UnsignedProfileView.xaml.
+    /// </summary>
+    public partial class UnsignedProfileView : UserControl
     {
-        throw new System.NotImplementedException();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnsignedProfileView"/> class.
+        /// </summary>
+        public UnsignedProfileView()
+        {
+            this.InitializeComponent();
+        }
+
+        private void BtnRegisterOrLogin_Click(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DALSipBiteUnite", "DALSipBi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLLSipBiteUnite", "BLLSipBiteUnite\BLLSipBiteUnite.csproj", "{44547242-A8A1-4EB5-9BC1-EBD688471079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSipBiteUnite", "WPFSipBiteUnite\WPFSipBiteUnite.csproj", "{8902A37E-4887-42EE-ABF5-E1F651821F56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSipBiteUnite", "WPFSipBiteUnite\WPFSipBiteUnite.csproj", "{8902A37E-4887-42EE-ABF5-E1F651821F56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3039864-0FB7-43D3-9F92-F501CD001AD5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

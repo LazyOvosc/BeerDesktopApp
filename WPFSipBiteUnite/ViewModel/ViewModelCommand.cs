@@ -1,51 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Windows.Input;
+﻿// <copyright file="ViewModelCommand.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFSipBiteUnite.ViewModel
 {
-    public class ViewModelCommand: ICommand
+    using System;
+    using System.Windows.Input;
+
+    /// <summary>
+    /// A command that relays its functionality to other objects by invoking delegates.
+    /// </summary>
+    public class ViewModelCommand : ICommand
     {
+        private readonly Action<object?> _executeAction;
+        private readonly Predicate<object?>? _canExecuteAction;
 
-        // Fields
-        private readonly Action<object> _executeAction;
-        private readonly Predicate<object> _canExecuteAction;
-
-        // Constructors
-        public ViewModelCommand(Action<object> executeAction)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ViewModelCommand"/> class.
+        /// </summary>
+        /// <param name="executeAction">The execution logic.</param>
+        public ViewModelCommand(Action<object?> executeAction)
         {
-            _executeAction = executeAction;
-            _canExecuteAction = null;
-        }
-        
-        public ViewModelCommand(Action<object> executeAction, Predicate<object> canExecuteAction)
-        {
-            _executeAction = executeAction;
-            _canExecuteAction = canExecuteAction;
+            this._executeAction = executeAction ?? throw new ArgumentNullException(nameof(executeAction));
         }
 
-        // Events
-        public event EventHandler CanExecuteChanged
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ViewModelCommand"/> class.
+        /// </summary>
+        /// <param name="executeAction">The execution logic.</param>
+        /// <param name="canExecuteAction">The execution status logic.</param>
+        public ViewModelCommand(Action<object?> executeAction, Predicate<object?>? canExecuteAction)
+        {
+            this._executeAction = executeAction ?? throw new ArgumentNullException(nameof(executeAction));
+            this._canExecuteAction = canExecuteAction;
+        }
+
+        /// <summary>
+        /// Occurs when changes occur that affect whether or not the command should execute.
+        /// </summary>
+        public event EventHandler? CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-        // Methods
+        /// <summary>
+        /// Determines whether the command can execute in its current state.
+        /// </summary>
+        /// <param name="parameter">Data used by the command.</param>
+        /// <returns>A boolean value indicating if the command can be executed.</returns>
         public bool CanExecute(object? parameter)
         {
-            return _canExecuteAction == null ? true : _canExecuteAction(parameter);
+            return this._canExecuteAction?.Invoke(parameter) ?? true;
         }
 
+        /// <summary>
+        /// Executes the command.
+        /// </summary>
+        /// <param name="parameter">Data used by the command.</param>
         public void Execute(object? parameter)
         {
-            _executeAction(parameter);
+            this._executeAction(parameter);
         }
-
-        // public event EventHandler? CanExecuteChanged;
     }
 }

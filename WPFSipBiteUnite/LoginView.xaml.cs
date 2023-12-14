@@ -1,42 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿// <copyright file="LoginView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFSipBiteUnite
 {
+    using System;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Input;
+
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for LoginView.xaml.
     /// </summary>
     public partial class LoginView : Window
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LoginView"/> class.
+        /// </summary>
         public LoginView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                DragMove();
+                this.DragMove();
             }
         }
 
-        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtUser_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -51,7 +49,7 @@ namespace WPFSipBiteUnite
             }
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             // Логіка переходу до вікна реєстрації
             RegisterView registerWindow = new RegisterView();
@@ -59,7 +57,7 @@ namespace WPFSipBiteUnite
             this.Close();
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }

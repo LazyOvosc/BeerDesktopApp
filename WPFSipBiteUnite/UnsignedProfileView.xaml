@@ -37,7 +37,7 @@
                 Content="Поринути у світ пива"
                 Margin="0,32,0,0"
                 Cursor="Hand"
-                Click="btnRegisterOrLogin_Click"
+                Click="BtnRegisterOrLogin_Click"
                 Height="44"
                 Width="320"
                 FontFamily="Montserrat"

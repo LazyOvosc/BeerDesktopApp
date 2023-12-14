@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StyleCopSettings version="105">
+    <Parsers>
+        <Parser ParserId="StyleCop.CSharp.CsParser">
+            <ParserSettings>
+                <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+            </ParserSettings>
+        </Parser>
+    </Parsers>
+    <Analyzers>
+        <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
+            <Rules>
+                <Rule Name="SA1115">
+                    <RuleSettings>
+                        <BooleanProperty Name="Enabled">False</BooleanProperty>
+                    </RuleSettings>
+                </Rule>
+            </Rules>
+            <AnalyzerSettings>
+                <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+            </AnalyzerSettings>
+        </Analyzer>
+    </Analyzers>
+</StyleCopSettings>

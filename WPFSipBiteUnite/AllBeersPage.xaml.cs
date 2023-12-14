@@ -1,55 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using WPFSipBiteUnite.ViewModel;
+﻿// <copyright file="AllBeersPage.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFSipBiteUnite
 {
+    using System.Windows;
+    using System.Windows.Controls;
+    using WPFSipBiteUnite.ViewModel;
+
     /// <summary>
-    /// Interaction logic for AllBeersPage.xaml
+    /// Interaction logic for AllBeersPage.xaml.
     /// </summary>
     public partial class AllBeersPage : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AllBeersPage"/> class.
+        /// </summary>
         public AllBeersPage()
         {
-            InitializeComponent();
-            DataContext = new BeersExploreViewModel();
-            BeerButton.IsChecked = true;
-            FoodButton.IsChecked = false;
-            ProfileButton.IsChecked = false;
+            this.InitializeComponent();
+            this.DataContext = new BeersExploreViewModel();
+            this.BeerButton.IsChecked = true;
+            this.FoodButton.IsChecked = false;
+            this.ProfileButton.IsChecked = false;
         }
 
         private void ProfileButton_Checked(object sender, RoutedEventArgs e)
         {
-            BeerButton.IsChecked = false;
-            FoodButton.IsChecked = false;
+            this.BeerButton.IsChecked = false;
+            this.FoodButton.IsChecked = false;
         }
 
         private void BeerButton_Checked(object sender, RoutedEventArgs e)
         {
-            ProfileButton.IsChecked = false;
-            FoodButton.IsChecked = false;
+            this.ProfileButton.IsChecked = false;
+            this.FoodButton.IsChecked = false;
         }
 
         private void FoodButton_Checked(object sender, RoutedEventArgs e)
         {
-            BeerButton.IsChecked= false;
-            ProfileButton.IsChecked = false;
+            this.BeerButton.IsChecked = false;
+            this.ProfileButton.IsChecked = false;
         }
 
         private void CustomCardSmall_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }

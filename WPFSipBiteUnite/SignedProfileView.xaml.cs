@@ -1,11 +1,22 @@
-﻿using System.Windows.Controls;
+﻿// <copyright file="SignedProfileView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace WPFSipBiteUnite;
-
-public partial class SignedProfileView : UserControl
+namespace WPFSipBiteUnite
 {
-    public SignedProfileView()
+    using System.Windows.Controls;
+
+    /// <summary>
+    /// Interaction logic for SignedProfileView.xaml.
+    /// </summary>
+    public partial class SignedProfileView : UserControl
     {
-        InitializeComponent();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SignedProfileView"/> class.
+        /// </summary>
+        public SignedProfileView()
+        {
+            this.InitializeComponent();
+        }
     }
 }

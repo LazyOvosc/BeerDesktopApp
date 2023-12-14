@@ -1,11 +1,22 @@
-﻿using System.Windows.Controls;
+﻿// <copyright file="BeersExploreView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace WPFSipBiteUnite;
-
-public partial class BeersView : UserControl
+namespace WPFSipBiteUnite
 {
-    public BeersView()
+    using System.Windows.Controls;
+
+    /// <summary>
+    /// Interaction logic for BeersView.xaml.
+    /// </summary>
+    public partial class BeersView : UserControl
     {
-        InitializeComponent();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BeersView"/> class.
+        /// </summary>
+        public BeersView()
+        {
+            this.InitializeComponent();
+        }
     }
 }

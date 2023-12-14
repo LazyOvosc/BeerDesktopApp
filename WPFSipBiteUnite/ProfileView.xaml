@@ -125,7 +125,7 @@
                                 FontSize="16"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Click="btnMinimize_Click">
+                                Click="BtnMinimize_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="{StaticResource Neutral800Brush}" />
@@ -155,7 +155,7 @@
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
                                 Margin="12, 0, 0,0"
-                                Click="btnClose_Click">
+                                Click="BtnClose_Click">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />

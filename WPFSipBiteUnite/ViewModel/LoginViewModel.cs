@@ -1,78 +1,103 @@
-﻿using System;
-using System.Security;
-using System.Security.Principal;
-using System.Threading;
-using System.Windows.Input;
-using DALSipBiteUnite.DbContext;
-using DALSipBiteUnite.Repositories;
+﻿// <copyright file="LoginViewModel.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFSipBiteUnite.ViewModel
 {
-    public class LoginViewModel:ViewModelBase
+    using System;
+    using System.Security;
+    using System.Security.Principal;
+    using System.Threading;
+    using System.Windows.Input;
+    using DALSipBiteUnite.DbContext;
+    using DALSipBiteUnite.Repositories;
+
+    /// <summary>
+    /// ViewModel for the LoginView.
+    /// </summary>
+    public class LoginViewModel : ViewModelBase
     {
-        public string Username
-        {
-            get => _username;
-            set
-            {
-                _username = value;
-                OnPropertyChanged(nameof(Username));
-            }
-        }
-
-        public string Password
-        {
-            get => _password;
-            set
-            {
-                _password = value;
-                OnPropertyChanged(nameof(Password));
-            }
-        }
-
-        public string ErrorMessage
-        {
-            get => _errorMessage;
-            set
-            {
-                _errorMessage = value;
-                OnPropertyChanged(nameof(ErrorMessage));
-            }
-        }
-
-        public bool IsViewVisible
-        {
-            get => _isViewVisible;
-            set
-            {
-                _isViewVisible = value;
-                OnPropertyChanged(nameof(IsViewVisible));
-            }
-        }
-
-        private string _username;
-        private string _password;
-        private string _errorMessage;
+        private readonly UserRepository userRepository;
+        private string _username = string.Empty;
+        private string _password = string.Empty;
+        private string _errorMessage = string.Empty;
         private bool _isViewVisible = true;
-        private UserRepository userRepository;
-        
-        public ICommand LoginCommand { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LoginViewModel"/> class.
+        /// </summary>
         public LoginViewModel()
         {
-            LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            userRepository = new UserRepository(new ApplicationDbContext());
+            this.LoginCommand = new ViewModelCommand(this.ExecuteLoginCommand, this.CanExecuteLoginCommand);
+            this.userRepository = new UserRepository(new ApplicationDbContext());
         }
+
+        /// <summary>
+        /// Gets or sets the username.
+        /// </summary>
+        public string Username
+        {
+            get => this._username;
+            set
+            {
+                this._username = value;
+                this.OnPropertyChanged(nameof(this.Username));
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the password.
+        /// </summary>
+        public string Password
+        {
+            get => this._password;
+            set
+            {
+                this._password = value;
+                this.OnPropertyChanged(nameof(this.Password));
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the error message.
+        /// </summary>
+        public string ErrorMessage
+        {
+            get => this._errorMessage;
+            set
+            {
+                this._errorMessage = value;
+                this.OnPropertyChanged(nameof(this.ErrorMessage));
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the view is visible.
+        /// </summary>
+        public bool IsViewVisible
+        {
+            get => this._isViewVisible;
+            set
+            {
+                this._isViewVisible = value;
+                this.OnPropertyChanged(nameof(this.IsViewVisible));
+            }
+        }
+
+        /// <summary>
+        /// Gets the command to login.
+        /// </summary>
+        public ICommand LoginCommand { get; }
 
         private bool CanExecuteLoginCommand(object obj)
         {
             bool validData = false;
 
             // Перевірка на не null і формат email
-            if (Username != null && !string.IsNullOrWhiteSpace(Username))
+            if (this.Username != null && !string.IsNullOrWhiteSpace(this.Username))
             {
                 // Перевірка на умови пароля
-                if (Password != null && Password.Length >= 8)
+                if (this.Password != null && this.Password.Length >= 8)
                 {
                     validData = true;
                 }
@@ -81,23 +106,21 @@ namespace WPFSipBiteUnite.ViewModel
             return validData;
         }
 
-
         private void ExecuteLoginCommand(object obj)
         {
-            var user = userRepository.GetUserByName(Username);
+            var user = this.userRepository.GetUserByName(this.Username);
             if (user is not null)
             {
-                if (user.UserPassword == Password)
+                if (user.UserPassword == this.Password)
                 {
-                    Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(Username), null);
-                    IsViewVisible = false;
+                    Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(this.Username), null);
+                    this.IsViewVisible = false;
                 }
                 else
                 {
-                    ErrorMessage = "* Invalid username or password";
+                    this.ErrorMessage = "* Invalid username or password";
                 }
             }
         }
     }
 }
-

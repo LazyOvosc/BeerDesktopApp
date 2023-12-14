@@ -83,7 +83,7 @@
                            VerticalAlignment="Center"
                            Margin="10,0,0,0" />
 
-                <Button x:Name="btnClose"
+                <Button x:Name="BtnClose"
                         BorderThickness="0"
                         Content="X"
                         Foreground="{StaticResource NeutralWhiteBrush}"
@@ -91,7 +91,7 @@
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="2"
-                        Click="btnClose_Click">
+                        Click="BtnClose_Click">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="{StaticResource Neutral700Brush}" />
@@ -151,7 +151,7 @@
                          Height="28"
                          VerticalContentAlignment="Center"
                          Margin="0,8,0,0"
-                         Padding="0,0,0,0" TextChanged="txtUser_TextChanged">
+                         Padding="0,0,0,0" TextChanged="TxtUser_TextChanged">
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource Neutral400}" />
                     </TextBox.BorderBrush>
@@ -178,7 +178,7 @@
                         Background="{StaticResource PrimaryBrush}"
                         BorderThickness="0"
                         Margin="24,0,0,0"
-                        Click="btnInfo_Click">
+                        Click="BtnInfo_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Template">
@@ -224,7 +224,7 @@
                         Margin="0,48,0,0"
                         Cursor="Hand"
                         Command="{Binding RegisterCommand}"
-                        Click="btnRegister_Click"
+                        Click="BtnRegister_Click"
                         Height="44"
                         FontFamily="Montserrat"
                         FontSize="16"
@@ -265,7 +265,7 @@
                             Content="Увійти"
                             Margin="53,0,0,0"
                             Cursor="Hand"
-                            Click="btnLogin_Click"
+                            Click="BtnLogin_Click"
                             Width="200"
                             Height="44"
                             FontFamily="Montserrat"

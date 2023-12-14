@@ -1,31 +1,41 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿// <copyright file="MainView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace WPFSipBiteUnite;
-
-public partial class MainView : Window
+namespace WPFSipBiteUnite
 {
-    public MainView()
-    {
-        InitializeComponent();
-    }
+    using System.Windows;
+    using System.Windows.Input;
 
-    private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+    /// <summary>
+    /// Interaction logic for MainView.xaml.
+    /// </summary>
+    public partial class MainView : Window
     {
-        if (e.LeftButton == MouseButtonState.Pressed)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainView"/> class.
+        /// </summary>
+        public MainView()
         {
-            DragMove();
+            this.InitializeComponent();
         }
-    }
-    
-    private void btnClose_Click(object sender, RoutedEventArgs e)
-    {
-        
-        Application.Current.Shutdown();
-    }
 
-    private void btnMinimize_Click(object sender, RoutedEventArgs e)
-    {
-        WindowState = WindowState.Minimized;
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

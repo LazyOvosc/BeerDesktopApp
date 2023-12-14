@@ -1,10 +1,22 @@
-﻿using System.Windows.Controls;
-namespace WPFSipBiteUnite;
+﻿// <copyright file="DishesExploreView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-public partial class DishesExploreView : UserControl
+namespace WPFSipBiteUnite
 {
-    public DishesExploreView()
+    using System.Windows.Controls;
+
+    /// <summary>
+    /// Interaction logic for DishesExploreView.xaml.
+    /// </summary>
+    public partial class DishesExploreView : UserControl
     {
-        InitializeComponent();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DishesExploreView"/> class.
+        /// </summary>
+        public DishesExploreView()
+        {
+            this.InitializeComponent();
+        }
     }
 }

@@ -1,96 +1,95 @@
-﻿
-using BLLSipBiteUnite.Services;
-using DALSipBiteUnite.Repositories;
-using System.Windows.Input;
-using WPFSipBiteUnite.ViewModel;
+﻿// <copyright file="MainViewModel.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WPFSipBiteUnite.ViewModel
 {
+    // Make sure to remove any unused using directives
+    using System.Windows.Input;
+
+    /// <summary>
+    /// ViewModel for the MainView.
+    /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        /// Fields
-        // private UserAccountModel _currentUserAccount;
-        private ViewModelBase _currentChildView;
-        private string _caption;
+        private ViewModelBase _currentChildView = null!;
+        private string _caption = string.Empty;
 
-
-        // private IUserRepository userRepository;
-
-
-        /// Properties
-        // public UserAccountModel CurrentUserAccount
-        // {
-        //     get { return _currentUserAccount; }
-        //
-        //     set
-        //     {
-        //         _currentUserAccount = value;
-        //         OnPropertyChanged(nameof(CurrentUserAccount));
-        //     }
-        // }
-
-        public ViewModelBase CurrentChildView
-        {
-            get { return _currentChildView; }
-
-            set
-            {
-                _currentChildView = value;
-                OnPropertyChanged(nameof(CurrentChildView));
-            }
-        }
-
-        public string Caption
-        {
-            get { return _caption; }
-
-            set
-            {
-                _caption = value;
-                OnPropertyChanged(nameof(Caption));
-            }
-        }
-        
-
-        /// --> Commands - to show the beersexploreview...
-        public ICommand ShowBeersExploreViewCommand { get; }
-        public ICommand ShowFoodsExploreViewCommand { get; }
-        public ICommand ShowDishesExploreViewCommand { get; }
-        public ICommand ShowUnsignedProfileViewCommand { get; }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainViewModel"/> class.
+        /// </summary>
         public MainViewModel()
         {
-            // userRepository = new UserRepository();
-            // Initialize commands
-            ShowBeersExploreViewCommand = new ViewModelCommand(ExecuteShowBeersExploreViewCommand);
-            ShowFoodsExploreViewCommand = new ViewModelCommand(ExecuteShowBeersExploreViewCommand);
-            ShowDishesExploreViewCommand = new ViewModelCommand(ExecuteShowDishesExploreViewCommand);
-            ShowUnsignedProfileViewCommand = new ViewModelCommand(ExecuteShowUnsignedProfileViewCommand);
+            this.ShowBeersExploreViewCommand = new ViewModelCommand(this.ExecuteShowBeersExploreViewCommand);
+            this.ShowFoodsExploreViewCommand = new ViewModelCommand(this.ExecuteShowBeersExploreViewCommand);
+            this.ShowDishesExploreViewCommand = new ViewModelCommand(this.ExecuteShowDishesExploreViewCommand);
+            this.ShowUnsignedProfileViewCommand = new ViewModelCommand(this.ExecuteShowUnsignedProfileViewCommand);
 
-            //Default view
-            ExecuteShowBeersExploreViewCommand(null);
-
-            // LoadCurrentUserData();
+            this.ExecuteShowBeersExploreViewCommand(null);
         }
+
+        /// <summary>
+        /// Gets or sets the current child view model.
+        /// </summary>
+        public ViewModelBase CurrentChildView
+        {
+            get => this._currentChildView;
+            set
+            {
+                this._currentChildView = value;
+                this.OnPropertyChanged(nameof(this.CurrentChildView));
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the caption of the current view.
+        /// </summary>
+        public string Caption
+        {
+            get => this._caption;
+            set
+            {
+                this._caption = value;
+                this.OnPropertyChanged(nameof(this.Caption));
+            }
+        }
+
+        /// <summary>
+        /// Gets the command to show the BeersExploreView.
+        /// </summary>
+        public ICommand ShowBeersExploreViewCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the command to show the FoodsExploreView.
+        /// </summary>
+        public ICommand ShowFoodsExploreViewCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the command to show the DishesExploreView.
+        /// </summary>
+        public ICommand ShowDishesExploreViewCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the command to show the UnsignedProfileView.
+        /// </summary>
+        public ICommand ShowUnsignedProfileViewCommand { get; private set; }
 
         private void ExecuteShowDishesExploreViewCommand(object obj)
         {
-            CurrentChildView = new DishesExploreViewModel();
-            Caption = "Страви";
+            this.CurrentChildView = new DishesExploreViewModel();
+            this.Caption = "Страви";
         }
 
-
-        private void ExecuteShowBeersExploreViewCommand(object obj)
+        private void ExecuteShowBeersExploreViewCommand(object? obj)
         {
-            CurrentChildView = new BeersExploreViewModel();
-            Caption = "Пиво";
+            this.CurrentChildView = new BeersExploreViewModel();
+            this.Caption = "Пиво";
         }
 
         private void ExecuteShowUnsignedProfileViewCommand(object obj)
         {
-            CurrentChildView = new UnsignedProfileViewModel();
-            Caption = "Профіль";
+            this.CurrentChildView = new UnsignedProfileViewModel();
+            this.Caption = "Профіль";
         }
     }
 }
-

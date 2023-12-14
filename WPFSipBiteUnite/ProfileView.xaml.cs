@@ -1,31 +1,41 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿// <copyright file="ProfileView.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace WPFSipBiteUnite;
-
-public partial class ProfileView : Window
+namespace WPFSipBiteUnite
 {
-    public ProfileView()
-    {
-        InitializeComponent();
-    }
-    
-    private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-    {
-        if (e.LeftButton == MouseButtonState.Pressed)
-        {
-            DragMove();
-        }
-    }
-    
-    private void btnClose_Click(object sender, RoutedEventArgs e)
-    {
-        
-        Application.Current.Shutdown();
-    }
+    using System.Windows;
+    using System.Windows.Input;
 
-    private void btnMinimize_Click(object sender, RoutedEventArgs e)
+    /// <summary>
+    /// Interaction logic for ProfileView.xaml.
+    /// </summary>
+    public partial class ProfileView : Window
     {
-        WindowState = WindowState.Minimized;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProfileView"/> class.
+        /// </summary>
+        public ProfileView()
+        {
+            this.InitializeComponent();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }
