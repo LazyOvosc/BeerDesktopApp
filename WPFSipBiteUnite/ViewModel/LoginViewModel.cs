@@ -22,6 +22,9 @@ namespace WPFSipBiteUnite.ViewModel
         private string _password = string.Empty;
         private string _errorMessage = string.Empty;
         private bool _isViewVisible = true;
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginViewModel"/> class.
@@ -106,18 +109,33 @@ namespace WPFSipBiteUnite.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-            var user = this.userRepository.GetUserByName(this.Username);
-            if (user is not null)
+            try
             {
-                if (user.UserPassword == this.Password)
+                var user = this.userRepository.GetUserByName(this.Username);
+                if (user is not null)
                 {
-                    Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(this.Username), null);
-                    this.IsViewVisible = false;
+                    if (user.UserPassword == this.Password)
+                    {
+                        Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(this.Username), null);
+                        this.IsViewVisible = false;
+                        logger.Info($"Вітаю у світі Пива {this.Username}");
+                        logger.Info($"Успішний вхід для користувача: {this.Username}");
+                    }
+                    else
+                    {
+                        this.ErrorMessage = "* Invalid username or password";
+                        logger.Warn($"Невірний пароль для користувача: {this.Username}");
+                    }
                 }
                 else
                 {
-                    this.ErrorMessage = "* Invalid username or password";
+                    logger.Warn($"Користувач не знайдений: {this.Username}");
                 }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, $"Помилка при вході для користувача: {this.Username}");
+                throw;
             }
         }
     }

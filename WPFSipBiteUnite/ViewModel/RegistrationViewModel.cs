@@ -4,6 +4,7 @@
 
 namespace WPFSipBiteUnite.ViewModel
 {
+    using System;
     using System.Text.RegularExpressions;
     using System.Windows.Input;
     using DALSipBiteUnite.DataBaseClasses;
@@ -20,6 +21,7 @@ namespace WPFSipBiteUnite.ViewModel
         private string _errorMessage = string.Empty;
         private bool _isViewVisible = true;
         private IUserRepository _userRepository;
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RegistrationViewModel"/> class.
@@ -88,27 +90,33 @@ namespace WPFSipBiteUnite.ViewModel
         /// </summary>
         public ICommand RegisterCommand { get; }
 
-        private bool CanExecuteRegisterCommand(object? obj) // Nullable parameter
+        private bool CanExecuteRegisterCommand(object? obj)
         {
-            // Regular expression for email format validation
             string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
 
-            // Check for non-null and email format
-            if (!string.IsNullOrWhiteSpace(this.Username) && Regex.IsMatch(this.Username, emailPattern))
+            bool isEmailValid = !string.IsNullOrWhiteSpace(this.Username) && Regex.IsMatch(this.Username, emailPattern);
+            bool isPasswordValid = !string.IsNullOrWhiteSpace(this.Password) && this.Password.Length >= 8 && Regex.IsMatch(this.Password, @"^(?=.*[A-Za-z])(?=.*\d).{8,}$");
+
+            if (!isEmailValid || !isPasswordValid)
             {
-                // Check for password conditions
-                if (!string.IsNullOrWhiteSpace(this.Password) && this.Password.Length >= 8 && Regex.IsMatch(this.Password, @"^(?=.*[A-Za-z])(?=.*\d).{8,}$"))
-                {
-                    return true;
-                }
+                logger.Warn($"Реєстрація: невалідні дані для користувача '{this.Username}'");
+                return false;
             }
 
-            return false;
+            return true;
         }
 
         private void ExecuteRegisterCommand(object obj)
         {
-            this._userRepository.AddUser(new User { UserEmail = this.Username, UserPassword = this.Password });
+            try
+            {
+                this._userRepository.AddUser(new User { UserEmail = this.Username, UserPassword = this.Password });
+                logger.Info($"Реєстрація: новий користувач '{this.Username}' успішно зареєстрований");
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, $"Реєстрація: помилка при реєстрації користувача '{this.Username}'");
+            }
         }
     }
 }

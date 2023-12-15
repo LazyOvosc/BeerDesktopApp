@@ -15,7 +15,7 @@
     
     <StackPanel HorizontalAlignment="Left"
                 VerticalAlignment="Top">
-        <TextBlock Text="Авторизуйся та поринь у світ пива, отримай можливість оцінювати самки"
+        <TextBlock Text="Авторизуйся та поринь у світ пива, отримай можливість оцінювати смаки"
                    TextWrapping="Wrap"
                    FontFamily="Montserrat"
                    FontSize="20"
@@ -34,7 +34,7 @@
         
 
         <Button x:Name="btnRegisterOrLogin"
-                Content="Поринути у світ пива"
+                Content="Повернутись до реальності"
                 Margin="0,32,0,0"
                 Cursor="Hand"
                 Click="BtnRegisterOrLogin_Click"

@@ -20,6 +20,7 @@ namespace WPFSipBiteUnite.ViewModel
     public class DishesExploreViewModel : ViewModelBase
     {
         private IFoodRepository foodRepository;
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DishesExploreViewModel"/> class.
@@ -34,6 +35,7 @@ namespace WPFSipBiteUnite.ViewModel
         {
             this.foodRepository = new FoodRepository(new ApplicationDbContext());
             this.Dishes = new ObservableCollection<Food>(this.foodRepository.GetAllFoods());
+            logger.Info("Користувач перейшов на сторінку DishesExploreView");
         }
 
         /// <summary>

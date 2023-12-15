@@ -22,7 +22,10 @@ namespace WPFSipBiteUnite
 
         private void BtnRegisterOrLogin_Click(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            var CurrentWindow = Window.GetWindow(this);
+            LoginView loginWindow = new LoginView();
+            loginWindow.Show();
+            CurrentWindow.Close();
         }
     }
 }
