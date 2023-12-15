@@ -49,9 +49,7 @@ namespace Tests.Tests.BeerTests
         [TestMethod]
         public async Task BeerRepository_Add_ReturnsBool()
         {
-            //Arrange
             var beerId = 1;
-            //Arrange
             var beer = new Beer()
             {
                 BeerType = "Lvivske",
@@ -65,10 +63,8 @@ namespace Tests.Tests.BeerTests
             var dbContext = await GetDbContext();
             var beerRepository = new BeerRepository(dbContext);
 
-            //Act
             var result = beerRepository.AddBeer(beer);
 
-            //Assert
             result.Should().BeTrue();
         }
 
@@ -77,14 +73,11 @@ namespace Tests.Tests.BeerTests
         [TestMethod]
         public async Task BeerRepository_GetAll_ReturnsList()
         {
-            //Arrange
             var dbContext = await GetDbContext();
             var beerRepository = new BeerRepository(dbContext);
 
-            //Act
             var result = beerRepository.GetAllBeers();
 
-            //Assert
             result.Should().NotBeNull();
             result.Should().BeOfType<List<Beer>>();
         }
@@ -93,7 +86,6 @@ namespace Tests.Tests.BeerTests
         public async Task BeerRepository_SuccessfulDelete_ReturnsTrue()
         {
             var beerId = 1;
-            //Arrange
             var beer = new Beer()
             {
                 BeerType = "Lvivske",
@@ -107,12 +99,10 @@ namespace Tests.Tests.BeerTests
             var dbContext = await GetDbContext();
             var beerRepository = new BeerRepository(dbContext);
 
-            //Act
             beerRepository.AddBeer(beer);
             var result = beerRepository.DeleteBeer(beerId);
             var count = await beerRepository.GetCountAsync();
 
-            //Assert
             result.Should().BeTrue();
             count.Should().Be(0);
         }
@@ -120,9 +110,7 @@ namespace Tests.Tests.BeerTests
         [TestMethod]
         public async Task  ClubRepository_GetCountAsync_ReturnsInt()
         {
-            //Arrange
             var beerId = 1;
-            //Arrange
             var beer = new Beer()
             {
                 BeerType = "Lvivske",
@@ -136,11 +124,9 @@ namespace Tests.Tests.BeerTests
             var dbContext = await GetDbContext();
             var beerRepository = new BeerRepository(dbContext);
 
-            //Act
             beerRepository.AddBeer(beer);
             var result = await beerRepository.GetCountAsync();
 
-            //Assert
             result.Should().Be(1);
         }
 
