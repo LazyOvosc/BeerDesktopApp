@@ -8,6 +8,7 @@ namespace DALSipBiteUnite.Repositories
     using System.Linq;
     using DALSipBiteUnite.DataBaseClasses;
     using DALSipBiteUnite.DbContext;
+    using Microsoft.EntityFrameworkCore;
 
     /// <summary>
     /// IFoodRepository interface.
@@ -18,7 +19,8 @@ namespace DALSipBiteUnite.Repositories
         /// Addes food.
         /// </summary>
         /// <param name="food">Food to add.</param>
-        void AddFood(Food food);
+        /// <returns>bool.</returns>
+        bool AddFood(Food food);
 
         /// <summary>
         /// Updates food.
@@ -30,7 +32,8 @@ namespace DALSipBiteUnite.Repositories
         /// Deletes food.
         /// </summary>
         /// <param name="foodId">Food to delete.</param>
-        void DeleteFood(int foodId);
+        /// <returns>bool.</returns>
+        bool DeleteFood(int foodId);
 
         /// <summary>
         /// Retrieves a food item by its unique identifier.
@@ -63,13 +66,26 @@ namespace DALSipBiteUnite.Repositories
         }
 
         /// <summary>
+        /// Asynchronously retrieves the count of foods in the database.
+        /// </summary>
+        /// <returns>The number of foods currently stored in the database.</returns>
+        public async Task<int> GetCountAsync()
+        {
+            return await this.context.Foods.CountAsync();
+        }
+
+        /// <summary>
         /// Adds a new food item to the database.
         /// </summary>
         /// <param name="food">The <see cref="Food"/> object representing the new food item.</param>
-        public void AddFood(Food food)
+        /// <returns>bool.</returns>
+        public bool AddFood(Food food)
         {
-            _ = this.context.Foods.Add(food);
-            _ = this.context.SaveChanges();
+            // _ = this.context.Foods.Add(food);
+            // _ = this.context.SaveChanges();
+            this.context.Foods.Add(food);
+            var saved = this.context.SaveChanges();
+            return saved > 0;
         }
 
         /// <summary>
@@ -86,14 +102,18 @@ namespace DALSipBiteUnite.Repositories
         /// Deletes a food item from the database based on its unique identifier.
         /// </summary>
         /// <param name="foodId">The unique identifier of the food item to be deleted.</param>
-        public void DeleteFood(int foodId)
+        /// <returns>bool.</returns>
+        public bool DeleteFood(int foodId)
         {
             var food = this.context.Foods.Find(foodId);
             if (food != null)
             {
-                _ = this.context.Foods.Remove(food);
-                _ = this.context.SaveChanges();
+                this.context.Foods.Remove(food);
+                var saved = this.context.SaveChanges();
+                return saved > 0;
             }
+
+            return false;
         }
 
         /// <summary>
