@@ -93,10 +93,8 @@ namespace WPFSipBiteUnite.ViewModel
         {
             bool validData = false;
 
-            // Перевірка на не null і формат email
             if (this.Username != null && !string.IsNullOrWhiteSpace(this.Username))
             {
-                // Перевірка на умови пароля
                 if (this.Password != null && this.Password.Length >= 8)
                 {
                     validData = true;

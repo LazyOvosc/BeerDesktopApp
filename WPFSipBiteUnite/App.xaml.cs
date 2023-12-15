@@ -18,8 +18,10 @@ namespace WPFSipBiteUnite
         /// <param name="e">Startup event arguments.</param>
         protected void ApplicationStart(object sender, StartupEventArgs e)
         {
-            var loginView = new LoginView();
-            loginView.Show();
+            var splashScreenView = new SplashScreenView();
+            splashScreenView.Show();
+            //var loginView = new LoginView();
+            //loginView.Show();
         }
     }
 }

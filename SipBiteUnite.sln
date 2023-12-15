@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSipBiteUniteTest", "WPFSIBBITEUNITTESTS\WPFSipBiteUniteTest.csproj", "{0F7C7433-8902-447A-A23D-BF07600645EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4213", "4213\4213.csproj", "{27A9BA23-A421-46F9-A165-0D455C9D6748}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{8902A37E-4887-42EE-ABF5-E1F651821F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8902A37E-4887-42EE-ABF5-E1F651821F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8902A37E-4887-42EE-ABF5-E1F651821F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7C7433-8902-447A-A23D-BF07600645EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7C7433-8902-447A-A23D-BF07600645EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7C7433-8902-447A-A23D-BF07600645EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7C7433-8902-447A-A23D-BF07600645EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27A9BA23-A421-46F9-A165-0D455C9D6748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27A9BA23-A421-46F9-A165-0D455C9D6748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27A9BA23-A421-46F9-A165-0D455C9D6748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27A9BA23-A421-46F9-A165-0D455C9D6748}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

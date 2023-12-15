@@ -54,8 +54,8 @@
 
         <Border.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                <GradientStop Color="{StaticResource Neutral900}" Offset="0" />
-                <GradientStop Color="#111111" Offset="1" />
+                <GradientStop Color="{StaticResource Neutral800}" Offset="0" />
+                <GradientStop Color="{StaticResource Neutral900}" Offset="1" />
             </LinearGradientBrush>
         </Border.Background>
 

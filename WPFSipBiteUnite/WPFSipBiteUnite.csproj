@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ImagesNew\animationLogo.gif" />
+    <None Remove="ImagesNew\leftGlass.png" />
+    <None Remove="ImagesNew\rightGlass.png" />
+    <None Remove="ImagesNew\SipBite.png" />
+    <None Remove="ImagesNew\splashes.png" />
+    <None Remove="ImagesNew\Unit.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
@@ -25,6 +34,15 @@
   <ItemGroup>
     <ProjectReference Include="..\BLLSipBiteUnite\BLLSipBiteUnite.csproj" />
     <ProjectReference Include="..\DALSipBiteUnite\DALSipBiteUnite.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ImagesNew\animationLogo.gif" />
+    <Resource Include="ImagesNew\leftGlass.png" />
+    <Resource Include="ImagesNew\rightGlass.png" />
+    <Resource Include="ImagesNew\SipBite.png" />
+    <Resource Include="ImagesNew\splashes.png" />
+    <Resource Include="ImagesNew\Unit.png" />
   </ItemGroup>
 
 </Project>
