@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj": {}
+    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
+    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
+        "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
         "projectName": "DALSipBiteUnite",
-        "projectPath": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
-        "packagesPath": "C:\\Users\\terka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\obj\\",
+        "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\terka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,6 +55,10 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -77,21 +86,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj": {
+    "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj",
+        "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj",
         "projectName": "WPFSipBiteUniteTest",
-        "projectPath": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj",
-        "packagesPath": "C:\\Users\\terka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\obj\\",
+        "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\WPFSipBiteUniteTest.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\WPFSIBBITEUNITTESTS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\terka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,14 +112,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
-                "projectPath": "C:\\Users\\terka\\Source\\Repos\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
+              "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Desktop\\Homework\\SipBiteUnite\\DALSipBiteUnite\\DALSipBiteUnite.csproj"
               }
             }
           }
@@ -141,6 +155,10 @@
               "target": "Package",
               "version": "[17.7.1, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -162,7 +180,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

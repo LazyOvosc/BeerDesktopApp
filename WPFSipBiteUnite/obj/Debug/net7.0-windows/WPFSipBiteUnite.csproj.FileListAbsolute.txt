@@ -222,3 +222,10 @@ C:\Users\1\Documents\GitHub\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-window
 C:\Users\1\Documents\GitHub\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\BLLSipBiteUnite.pdb
 C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\BLLSipBiteUnite.dll
 C:\Users\dimon\OneDrive\Документи\VSProjects\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\BLLSipBiteUnite.pdb
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\BeerItemDetailedView.g.cs
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\SplashScreenView.g.cs
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\NLog.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\BLLSipBiteUnite.dll
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\bin\Debug\net7.0-windows\BLLSipBiteUnite.pdb
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\BeerItemDetailedView.baml
+C:\Users\Sergio\Desktop\Homework\SipBiteUnite\WPFSipBiteUnite\obj\Debug\net7.0-windows\SplashScreenView.baml
